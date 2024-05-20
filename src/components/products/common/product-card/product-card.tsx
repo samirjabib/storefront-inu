@@ -6,7 +6,7 @@ import ProductCardPricing from './producat-card-pricing';
 export function ProductCard({ product }: { product: Product_Mock }) {
 	return (
 		<article className='group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer'>
-			<header className='flex max-h-48 min-h-48 w-full mb-4'>
+			<header className='flex max-h-48 min-h-48 w-full mb-4 relative'>
 				<Image
 					src={product.img_url}
 					alt={product.product_name}
@@ -14,8 +14,12 @@ export function ProductCard({ product }: { product: Product_Mock }) {
 					height={228}
 					className='object-contain rounded-lg w-full'
 				/>
+				{product.has_disccount && (
+					<span className='bg-accent-secondary-500 text-sm absolute px-2 text-white rounded-lg'>
+						-17%
+					</span>
+				)}
 			</header>
-			<div></div>
 			<section>
 				<h3
 					id={`product-name-${product.id}`}

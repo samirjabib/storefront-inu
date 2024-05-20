@@ -4,7 +4,7 @@ import { shortenProductName } from '@/lib/utils';
 
 export function ProductCard({ product }: { product: Product_Mock }) {
 	return (
-		<article className='bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-72 shadow-sm border border-neutral-100 p-4'>
+		<article className='bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-72 shadow-sm border border-neutral-100 p-4 relative'>
 			<div className='flex max-h-48 min-h-48 w-full'>
 				<Image
 					src={product.img_url}

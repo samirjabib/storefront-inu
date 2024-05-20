@@ -9,7 +9,7 @@ export default function Home() {
 		<main className='bg-neutral-100'>
 			<FilterCategories />
 			<Banner data={dummieData} />
-			<ProductCarousel />
+			<ProductCarousel title='Lo mas vendido' />
 			<BannerGrid />
 		</main>
 	);

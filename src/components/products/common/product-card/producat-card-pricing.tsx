@@ -16,6 +16,17 @@ export default function ProductCardPricing({
 		);
 	}
 
+	if (product.free_delivery)
+		return (
+			<div className='flex gap-4 items-center mt-4'>
+				<p className='text-lg text-neutral-900 font-semibold '>
+					$ {product.price}
+				</p>
+				<span className='text-xs text-accent-terciary-500 font-normal'>
+					Envío gratis!
+				</span>
+			</div>
+		);
 	return (
 		<p className='text-lg text-neutral-900 font-semibold mt-4'>
 			$ {product.price}

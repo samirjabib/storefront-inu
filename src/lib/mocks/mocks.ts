@@ -8,6 +8,7 @@ export type Product_Mock = {
 	has_disccount: boolean;
 	price_with_disccount: string;
 	disccount_percentage: number;
+	free_delivery: boolean;
 	description?: string; // Optional property example
 };
 export const collection_mock = [
@@ -19,6 +20,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '4.469.900',
 		disccount_percentage: 24,
+		free_delivery: true,
 	},
 	{
 		id: 2,
@@ -29,6 +31,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '2.297.400',
 		disccount_percentage: 23,
+		free_delivery: true,
 	},
 	{
 		id: 3,
@@ -39,6 +42,7 @@ export const collection_mock = [
 		price_with_disccount: '420.000',
 		has_disccount: false,
 		disccount_percentage: 19,
+		free_delivery: false,
 	},
 	{
 		id: 4,
@@ -49,6 +53,7 @@ export const collection_mock = [
 		has_disccount: false,
 		price_with_disccount: '1.470.030',
 		disccount_percentage: 43,
+		free_delivery: false,
 	},
 	{
 		id: 5,
@@ -58,6 +63,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '4.469.900',
 		disccount_percentage: 24,
+		free_delivery: true,
 	},
 	{
 		id: 6,
@@ -68,6 +74,7 @@ export const collection_mock = [
 		has_disccount: false,
 		price_with_disccount: '2.297.400',
 		disccount_percentage: 23,
+		free_delivery: true,
 	},
 	{
 		id: 7,
@@ -78,6 +85,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '420.000',
 		disccount_percentage: 19,
+		free_delivery: false,
 	},
 	{
 		id: 8,
@@ -88,6 +96,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '1.470.030',
 		disccount_percentage: 43,
+		free_delivery: false,
 	},
 	{
 		id: 9,
@@ -97,6 +106,7 @@ export const collection_mock = [
 		has_disccount: false,
 		price_with_disccount: '4.469.900',
 		disccount_percentage: 24,
+		free_delivery: false,
 	},
 	{
 		id: 10,
@@ -105,6 +115,7 @@ export const collection_mock = [
 			'Consola Sony Playstation 5 Slim Version Lector Disco Japonesa Ps5 1TB SSD Blanco',
 		price: '2.989.900',
 		has_disccount: false,
+		free_delivery: true,
 
 		price_with_disccount: '2.297.400',
 		disccount_percentage: 23,
@@ -112,6 +123,8 @@ export const collection_mock = [
 	{
 		id: 11,
 		img_url: assets.smart_home,
+		free_delivery: true,
+
 		product_name:
 			'Google Nest Hub 2nd Gen con asistente virtual Google Assistant, pantalla integrada de 7" charcoal 110V/220V',
 		price: '520.000',
@@ -128,6 +141,7 @@ export const collection_mock = [
 		has_disccount: true,
 		price_with_disccount: '1.470.030',
 		disccount_percentage: 43,
+		free_delivery: false,
 	},
 	{
 		id: 13,
@@ -136,6 +150,7 @@ export const collection_mock = [
 		price: '3.189.000',
 		price_with_disccount: '4.469.900',
 		disccount_percentage: 24,
+		free_delivery: true,
 	},
 	{
 		id: 14,
@@ -145,6 +160,7 @@ export const collection_mock = [
 		price: '2.989.900',
 		price_with_disccount: '2.297.400',
 		disccount_percentage: 23,
+		free_delivery: false,
 	},
 	{
 		id: 15,
@@ -154,6 +170,7 @@ export const collection_mock = [
 		price: '520.000',
 		price_with_disccount: '420.000',
 		disccount_percentage: 19,
+		free_delivery: true,
 	},
 	{
 		id: 16,
@@ -163,5 +180,6 @@ export const collection_mock = [
 		price: '520.000',
 		price_with_disccount: '1.470.030',
 		disccount_percentage: 43,
+		free_delivery: false,
 	},
 ];

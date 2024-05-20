@@ -6,7 +6,7 @@ import ProductCarousel from '@/components/products/product-carousel/product-caro
 
 export default function Home() {
 	return (
-		<main className='bg-brand-100'>
+		<main className='bg-neutral-100'>
 			<FilterCategories />
 			<Banner data={dummieData} />
 			<ProductCarousel />

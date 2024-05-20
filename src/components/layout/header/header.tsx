@@ -17,14 +17,14 @@ export default async function Header() {
 							<Search className='hidden lg:flex lg:flex-grow lg:max-w-xl' />
 							<Link
 								href={'/'}
-								className='bg-orange-300 gap-2 hover:bg-orange-500 py-2 px-4 rounded-full flex items-center justify-center'
+								className='bg-accent-primary-300 gap-2 hover:bg-accent-primary-500 py-2 px-4 rounded-full flex items-center justify-center'
 							>
 								<p className='text-white text-sm font-semibold'>Promociones</p>
 							</Link>
 						</div>
 						<div className='flex gap-6 items-center cursor-pointer '>
 							<div className='relative'>
-								<div className='w-2 h-2 bg-red-500 rounded-full absolute top-0 right-1' />
+								<div className='w-2 h-2 bg-accent-secondary-500 rounded-full absolute top-0 right-1' />
 								<Bell size={24} className='text-white' />
 							</div>
 							<Heart size={24} className='text-white' />

@@ -1,5 +1,6 @@
 import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 import ProductCarouselUI from './product-carousel-ui';
+import { Separator } from '@/components/common/ui/separator';
 
 const ProductCarousel = ({ title = 'Lo mas vendido' }: { title: string }) => {
 	//add query from server side
@@ -10,6 +11,7 @@ const ProductCarousel = ({ title = 'Lo mas vendido' }: { title: string }) => {
 					{title}
 				</h2>
 			</div>
+			<Separator className='mb-4 bg-neutral-200' />
 			<ProductCarouselUI
 				collection={collection_mock as unknown as Product_Mock[]}
 			/>

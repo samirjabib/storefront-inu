@@ -18,6 +18,8 @@ export default function Home() {
 			<FlashSalesGrid
 				collection={collection_mock as unknown as Product_Mock[]}
 			/>
+
+			<ProductVitrine title='Lo nuevo' />
 		</main>
 	);
 }

@@ -1,6 +1,6 @@
 export default function WelcomeHome() {
 	return (
-		<div className='py-12'>
+		<div className='py-12 px-4 '>
 			<h1 className='text-center text-neutral-900 font-bold text-3xl lg:text-5xl mb-4'>
 				Bienvenidos a [MARKET-PLACE]
 			</h1>

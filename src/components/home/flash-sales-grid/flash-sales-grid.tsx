@@ -1,5 +1,5 @@
+import { ProductCard } from '@/components/common/products/common/product-card/product-card';
 import { Product_Mock } from '@/lib/mocks/mocks';
-import { ProductCard } from '../common/product-card/product-card';
 
 export default function FlashSalesGrid({
 	collection,

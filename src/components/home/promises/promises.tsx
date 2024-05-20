@@ -4,8 +4,8 @@ import { RiSecurePaymentFill } from "react-icons/ri";
 
 export default function Promises() {
   return (
-    <section className="flex flex-row max-w-screen-2xl px-4 md:px-6 mx-auto py-12 bg-blue-100 rounded-lg">
-      <div className="grid grid-cols-1 gap-5 w-full md:grid-cols-5">
+    <section className="flex flex-row max-w-screen-2xl px-4 md:px-6 mx-auto">
+      <div className="grid grid-cols-1 gap-5 w-full md:grid-cols-5 bg-blue-100 py-6 px-4 rounded-lg">
         {Array.from({ length: 5 }).map((item) => {
           return (
             <div className="flex items-row items-center flex-row gap-x-4 border border-gray-200 w-full p-3 rounded-lg bg-neutral-50">

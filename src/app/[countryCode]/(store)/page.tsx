@@ -16,13 +16,13 @@ export default function Home() {
       <Banner data={dummieData} />
       <WelcomeHome />
       <ProductVitrine title="Lo mas vendido" />
-
       <BannerGrid />
-      <Promises />
       <FlashSalesGrid
         collection={collection_mock as unknown as Product_Mock[]}
       />
       <ProductVitrine title="Lo nuevo" />
+      <Banner data={dummieData} />
+
       <PopularCategoryGrid
         collection={collection_mock as unknown as Product_Mock[]}
       />
@@ -30,8 +30,8 @@ export default function Home() {
       <ProductVitrine title="Mas vendido de Apple" className="py-8" />
       <ProductVitrine title="Mas vendido de Xiaomi" className="py-8" />
       <ProductVitrine title="Mas vendido de Hawei" className="py-8" />
-      <Promises />
       <FilterCategories />
+      <Promises />
     </main>
   );
 }

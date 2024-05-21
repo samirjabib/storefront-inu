@@ -1,15 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
-export const poppins = Poppins({
+const poppins_font = Poppins({
 	weight: ['400', '500', '700', '800', '900'],
 	style: ['normal', 'italic'],
 	subsets: ['latin'],
 	display: 'swap',
-	variable: '--poppins-font',
 });
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://localhost:8000';
@@ -25,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={poppins.className}>{children}</body>
+			<body className={poppins_font.className}>{children}</body>
 		</html>
 	);
 }

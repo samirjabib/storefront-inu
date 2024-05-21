@@ -9,7 +9,7 @@ export default function ProductCardPricing({
 		return (
 			<div className='flex flex-col mt-2'>
 				<p className='text-xs text-gray-300 line-through'>$ {product.price}</p>
-				<p className='text-lg text-neutral-900 font-medium'>
+				<p className='text-lg text-neutral-900 font-semibold'>
 					$ {product.price_with_disccount}
 				</p>
 			</div>
@@ -28,8 +28,6 @@ export default function ProductCardPricing({
 			</div>
 		);
 	return (
-		<p className='text-lg text-neutral-900 font-semibold mt-4'>
-			$ {product.price}
-		</p>
+		<p className='text-lg text-neutral-900 font-semibold '>$ {product.price}</p>
 	);
 }

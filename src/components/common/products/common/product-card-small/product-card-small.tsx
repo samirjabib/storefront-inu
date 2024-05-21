@@ -4,6 +4,7 @@ import { cn, shortenProductName } from "@/lib/utils";
 import LocalizedClientLink from "@/components/common/localized-client-link/localized-client-link";
 import ProductCardSmallPricing from "./product-card-small-pricing";
 import { Separator } from "@/components/common/ui/separator";
+import ProductReviewStore from "./product-card-store-review";
 
 export function ProductCardSmall({
   product,
@@ -16,16 +17,15 @@ export function ProductCardSmall({
     <LocalizedClientLink href={`/products/${product.id}`}>
       <article
         className={cn(
-          "group w-full min-h-32 rounded-lg p-4 relative cursor-pointer grid grid-cols-6 gap-x-4",
+          "group w-full min-h-32 rounded-lg px-2 py-4 relative cursor-pointer grid grid-cols-6 gap-x-4",
           containerStyles
         )}
       >
-        <header className="w-full relative col-span-2 min-h-32">
+        <header className="w-full relative col-span-2 min-h-7 max-h-min-h-7">
           <Image
             src={product.img_url}
             alt={product.product_name}
-            width={160}
-            height={160}
+            fill
             className="object-contain rounded-lg w-full"
           />
           {product.has_disccount && (
@@ -37,10 +37,13 @@ export function ProductCardSmall({
         <section className="col-span-4">
           <h3
             id={`product-name-${product.id}`}
-            className="text-sm group-hover:text-brand-500"
+            className="text-xs group-hover:text-brand-500 "
           >
             {shortenProductName(product.product_name)}
           </h3>
+          <div className="w-full py-1 mb-2">
+            <ProductReviewStore review_rating={5} />
+          </div>
           <ProductCardSmallPricing product={product} />
         </section>
       </article>

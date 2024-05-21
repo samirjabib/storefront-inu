@@ -9,7 +9,7 @@ export default function ProductCardSmallPricing({
     return (
       <div className="flex flex-col">
         <p className="text-xs text-gray-300 line-through">$ {product.price}</p>
-        <p className="text-lg text-neutral-900 font-semibold">
+        <p className="text-base text-neutral-900 font-semibold">
           $ {product.price_with_disccount}
         </p>
       </div>
@@ -18,8 +18,8 @@ export default function ProductCardSmallPricing({
 
   if (product.free_delivery)
     return (
-      <div className="flex flex-col">
-        <p className="text-lg text-neutral-900 font-semibold ">
+      <div className="flex flex-row items-center gap-x-4">
+        <p className="text-lg text-neutral-900 font-semibold">
           $ {product.price}
         </p>
         <span className="text-xs text-accent-terciary-500 font-normal">

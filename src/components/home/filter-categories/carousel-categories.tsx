@@ -29,7 +29,7 @@ export function CarouselCategories() {
       opts={{
         align: "start",
       }}
-      className="w-full mx-auto max-w-screen-2xl py-6 px-4 md:px-6"
+      className="w-full mx-auto max-w-screen-xl py-6"
     >
       <CarouselContent>
         {categories.map((category, index) => (

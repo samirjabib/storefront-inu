@@ -29,7 +29,7 @@ export function ProductCardSmall({
             className="object-contain rounded-lg w-full"
           />
           {product.has_disccount && (
-            <span className="bg-accent-secondary-500 text-sm absolute px-2 text-white rounded-lg  top-0">
+            <span className="bg-accent-secondary-500 text-xs md:text-sm absolute px-2 text-white rounded-lg  top-0">
               -17%
             </span>
           )}
@@ -37,7 +37,7 @@ export function ProductCardSmall({
         <section className="col-span-4">
           <h3
             id={`product-name-${product.id}`}
-            className="text-xs group-hover:text-brand-500 "
+            className="text-xs md:text-sm group-hover:text-brand-500 "
           >
             {shortenProductName(product.product_name)}
           </h3>

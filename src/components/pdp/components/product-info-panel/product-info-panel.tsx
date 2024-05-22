@@ -6,7 +6,7 @@ import ProductReview from './product-review';
 
 export default function ProductImgGallery() {
 	return (
-		<section className='flex flex-col w-full lg:w-1/2 bg-white  rounded-lg shadow-sm p-4 gap-2'>
+		<section className='flex flex-col w-full lg:w-1/2 bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6'>
 			<ProductInfoPanelHeader />
 			<ProductName />
 			<ProductReview review_rating={4.5} />

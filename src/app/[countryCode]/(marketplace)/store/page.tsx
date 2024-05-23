@@ -19,7 +19,7 @@ export default function Store() {
       <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8">
         <div className="col-span-4">
           <div className="py-6 flex flex-row items-center gap-x-3">
-            <h1 className="text-2xl font-semibold tracking-tight text-gray-800 ">
+            <h1 className="text-2xl font-semibold tracking-tight text-gray-800">
               Consolas
             </h1>
             <p className="text-xs text-gray-500 mt-1">(80+ resultados)</p>

@@ -1,16 +1,16 @@
-import { listRegions } from "@/lib/data/data";
-import SideMenu from "./side-menu";
+import { listRegions } from '@/lib/data/data';
+import SideMenu from './side-menu';
 import {
   Bell,
   Heart,
   ShoppingCart,
   SlidersHorizontal,
   User,
-} from "lucide-react";
-import Search from "./search";
-import LoginButton from "@/components/common/login-button/login-button";
-import Link from "next/link";
-import ActionsBar from "./actions-bar";
+} from 'lucide-react';
+import Search from './search';
+import LoginButton from '@/components/common/login-button/login-button';
+import Link from 'next/link';
+import ActionsBar from './actions-bar';
 
 export default async function Header() {
   const regions = await listRegions().then((regions) => regions);
@@ -23,7 +23,7 @@ export default async function Header() {
               <SideMenu regions={regions} />
               <Search className="hidden lg:flex lg:flex-grow lg:max-w-xl" />
               <Link
-                href={"/"}
+                href={'/'}
                 className="bg-accent-primary-300 gap-2 hover:bg-accent-primary-500 py-2 px-4 rounded-full flex items-center justify-center"
               >
                 <p className="text-white text-sm font-semibold">Promociones</p>

@@ -22,7 +22,7 @@ export default function Home() {
 			/>
 			<ProductVitrine title='Lo nuevo' />
 			<Banner data={dummieData} />
-			<PopularCategoryGrid
+			<PopularCategoryGrid	
 				collection={collection_mock as unknown as Product_Mock[]}
 			/>
 			<ProductVitrine title='Mas vendido de Apple' className='py-8' />

@@ -11,14 +11,14 @@ export default function ActionsBar() {
 
   if (isStorePage) {
     return (
-      <div className="flex flex-row items-center gap-x-4">
+      <div className="flex flex-row items-center gap-x-4 md:hidden">
         <Search className="flex-1" />
-        <div className="md:hidden">
+        <div>
           <ProductStoreFilterMobile />
         </div>
       </div>
     );
   }
 
-  return <Search />;
+  return <Search className="md:hidden" />;
 }

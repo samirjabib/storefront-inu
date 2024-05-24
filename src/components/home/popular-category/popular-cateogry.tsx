@@ -1,6 +1,6 @@
-import LocalizedClientLink from "@/components/common/localized-client-link/localized-client-link";
-import { ProductCard } from "@/components/common/products/common/product-card/product-card";
-import { Product_Mock } from "@/lib/mocks/mocks";
+import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
+import { ProductCard } from '@/components/common/products/common/product-card/product-card';
+import { Product_Mock } from '@/lib/mocks/mocks';
 
 export default function PopularCategoryGrid({
   collection,
@@ -8,7 +8,7 @@ export default function PopularCategoryGrid({
   collection: Product_Mock[];
 }) {
   return (
-    <article className="px-4 lg:px-6 max-w-screen-2xl mx-auto py-6">
+    <article className="px-4 lg:px-6 max-w-screen-xl mx-auto py-6">
       <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
         Smart home
       </h2>

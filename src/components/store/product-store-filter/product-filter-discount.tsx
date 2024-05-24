@@ -33,6 +33,12 @@ export default function ProductFilterDiscount() {
                 45% de descuento y mas
               </label>
             </div>
+            <div className="flex flex-row items-center gap-x-2">
+              <Checkbox id="price-2" />
+              <label htmlFor="price-2" className="text-sm font-normal">
+                45% de descuento y mas
+              </label>
+            </div>
           </div>
         </AccordionContent>
       </AccordionItem>

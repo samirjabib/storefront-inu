@@ -33,7 +33,7 @@ export function ProductStoreFilterMobile() {
       <SheetContent className="overflow-y-scroll w-full p-0">
         <SheetHeader className="px-4 pt-4 fixed top-0 left-0 w-full bg-white z-20">
           <div className="flex flex-row items-center justify-between border-b border-gray-200">
-            <X className="text-gray-500" onClick={() => setIsOpen(false)} />
+            <X className="text-gray-500" onClick={() => setIsOpen(false)} />    
             <h2 className="text-sm">
               <span className="font-medium">Filtro</span>
               <span className="text-xs">(4)</span>

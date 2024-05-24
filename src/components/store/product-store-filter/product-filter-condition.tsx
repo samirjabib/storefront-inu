@@ -8,8 +8,8 @@ import { Checkbox } from '@/components/common/ui/checkbox';
 
 export default function ProductFilterCondition() {
   return (
-    <Accordion type="single" collapsible>
-      <AccordionItem value="item-1">
+    <Accordion type="single" collapsible defaultValue="condition">
+      <AccordionItem value="condition">
         <AccordionTrigger className="text-sm text-gray-800">
           Condición
         </AccordionTrigger>

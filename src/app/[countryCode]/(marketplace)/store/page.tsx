@@ -1,15 +1,15 @@
-import { dummieData } from "@/components/common/banner/data";
-import { Separator } from "@/components/common/ui/separator";
-import FilterCategories from "@/components/home/filter-categories/filter-categories";
-import Promises from "@/components/home/promises/promises";
+import { dummieData } from '@/components/common/banner/data';
+import { Separator } from '@/components/common/ui/separator';
+import FilterCategories from '@/components/home/filter-categories/filter-categories';
+import Promises from '@/components/home/promises/promises';
 
-import BreadCrumbStore from "@/components/store/bread-crumb-store";
-import ProductStoreFilter from "@/components/store/product-store-filter";
-import ProductStorePagination from "@/components/store/product-store-pagination";
-import StoreProductGrid from "@/components/store/store-product-grid";
+import BreadCrumbStore from '@/components/store/bread-crumb-store';
+import ProductStoreFilter from '@/components/store/product-store-filter/product-store-filter';
+import ProductStorePagination from '@/components/store/product-store-pagination';
+import StoreProductGrid from '@/components/store/store-product-grid';
 
-import { collection_mock, Product_Mock } from "@/lib/mocks/mocks";
-import { Checkbox } from "@radix-ui/react-checkbox";
+import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
+import { Checkbox } from '@radix-ui/react-checkbox';
 
 export default function Store() {
   return (

@@ -11,6 +11,7 @@ import Search from './search';
 import LoginButton from '@/components/common/login-button/login-button';
 import Link from 'next/link';
 import ActionsBar from './actions-bar';
+import AuthModal from '@/components/auth/auth-modal';
 
 export default async function Header() {
   const regions = await listRegions().then((regions) => regions);
@@ -35,9 +36,7 @@ export default async function Header() {
                 <Bell size={24} className="text-white" />
               </div>
               <Heart size={24} className="text-white" />
-              <LoginButton className="flex flex-col">
-                <User size={24} className="text-white" />
-              </LoginButton>
+              <AuthModal />
               <ShoppingCart size={24} className="text-white" />
             </div>
           </div>

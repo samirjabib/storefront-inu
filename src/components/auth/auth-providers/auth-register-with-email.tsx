@@ -24,9 +24,10 @@ export default function AuthRegisterWithEmail() {
   const searchParams = useSearchParams();
   const [isShow, setIsShow] = useState(false);
 
-  const handleLoginEmail = () => {
+  const backToProviderOptions = () => {
     const params = new URLSearchParams(searchParams);
     params.delete('login_with_email');
+    params.delete('register_with_email');
 
     replace(`${pathname}?${params.toString()}`);
   };
@@ -41,8 +42,8 @@ export default function AuthRegisterWithEmail() {
         transition={{ duration: 0.1 }}
       >
         <AuthHeaderNavigation
-          title={'Logear con tu email'}
-          onBackClick={handleLoginEmail}
+          title={'Registrate con tu email'}
+          onBackClick={backToProviderOptions}
         />
         <form className="mb-8 flex flex-col gap-5">
           <InputField

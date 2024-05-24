@@ -19,6 +19,13 @@ export default function AuthOptionsContainer() {
     replace(`${pathname}?${params.toString()}`);
   };
 
+  const handleRegisterEmail = () => {
+    const params = new URLSearchParams(searchParams);
+    params.set('register_with_email', 'true');
+
+    replace(`${pathname}?${params.toString()}`);
+  };
+
   return (
     <LazyMotion features={domAnimation}>
       <m.div
@@ -29,7 +36,7 @@ export default function AuthOptionsContainer() {
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.1 }}
       >
-        <h2 className="font-semibold text-2xl text-center py-4">Logear con</h2>
+        <h2 className="font-semibold text-2xl text-center py-4">Ingresa con</h2>
         <AuthOptionButton
           onClick={() => console.log('click')}
           type="button"
@@ -50,6 +57,7 @@ export default function AuthOptionsContainer() {
         <button
           type="button"
           className="w-full text-center font-medium text-primary transition-colors hover:text-primary/70"
+          onClick={handleRegisterEmail}
         >
           Crea tu cuenta
         </button>

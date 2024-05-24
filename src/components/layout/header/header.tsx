@@ -1,14 +1,7 @@
 import { listRegions } from '@/lib/data/data';
 import SideMenu from './side-menu';
-import {
-  Bell,
-  Heart,
-  ShoppingCart,
-  SlidersHorizontal,
-  User,
-} from 'lucide-react';
+import { Bell, Heart, ShoppingCart } from 'lucide-react';
 import Search from './search';
-import LoginButton from '@/components/auth/auth-button/login-button';
 import Link from 'next/link';
 import ActionsBar from './actions-bar';
 import AuthModal from '@/components/auth/auth-modal';

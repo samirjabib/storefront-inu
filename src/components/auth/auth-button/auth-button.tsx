@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
-export default function LoginButton({
+export default function AuthButton({
   children,
   className,
 }: {
@@ -14,19 +14,15 @@ export default function LoginButton({
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  const handleLogin = (query: string) => {
+  const handleLogin = () => {
     const params = new URLSearchParams(searchParams);
-    params.set('login_modal', query);
+    params.set('login_modal_open', 'true');
 
     replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (
-    <button
-      type="button"
-      onClick={() => handleLogin('login')}
-      className={cn(className)}
-    >
+    <button type="button" onClick={handleLogin} className={cn(className)}>
       {children}
     </button>
   );

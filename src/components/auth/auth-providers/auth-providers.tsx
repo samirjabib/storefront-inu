@@ -1,9 +1,10 @@
 import { m } from 'framer-motion';
 
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaApple } from 'react-icons/fa';
 import AuthOptionButton from './auth-provider-button';
 import { FiMail } from 'react-icons/fi';
 import { BsGoogle } from 'react-icons/bs';
+
 import { LazyMotion, domAnimation } from 'framer-motion';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
@@ -42,15 +43,15 @@ export default function AuthOptionsContainer() {
           type="button"
           className="bg-primary text-white hover:bg-primary/90"
         >
-          <BsGoogle className="text-lg text-white/50" /> Continuar con google
+          <BsGoogle size={24} /> Continuar con google
         </AuthOptionButton>
         <AuthOptionButton type="button" onClick={handleLoginEmail}>
-          <FiMail className="text-lg text-zinc-600" />
+          <FiMail size={24} />
           Ingresa con tu email
         </AuthOptionButton>
         <AuthOptionButton type="button" onClick={() => console.log('click')}>
-          <FaXTwitter className="text-lg text-zinc-600" />
-          Ingresa con Twitter
+          <FaApple size={24} />
+          Ingresa con Apple
         </AuthOptionButton>
         <div className="mt-10 border-t border-t-black/10 pt-10" />
 

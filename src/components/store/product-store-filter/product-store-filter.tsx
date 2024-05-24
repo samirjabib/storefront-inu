@@ -1,11 +1,3 @@
-'use client';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from '../../common/ui/accordion';
-import { Checkbox } from '../../common/ui/checkbox';
 import ProductFilterAvalability from './product-availability';
 import ProductFilterBrand from './product-filter-brand';
 import ProductFilterCondition from './product-filter-condition';

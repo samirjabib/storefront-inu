@@ -14,7 +14,6 @@ export default function AuthModal() {
 
   const isOpen = searchParams.get('login_modal_open');
 
-  console.log(isOpen);
   const { push } = useRouter();
   const pathname = usePathname();
 

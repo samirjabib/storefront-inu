@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { Product_Mock } from "@/lib/mocks/mocks";
-import { cn, shortenProductName } from "@/lib/utils";
-import ProductCardPricing from "./producat-card-pricing";
-import LocalizedClientLink from "@/components/common/localized-client-link/localized-client-link";
+import Image from 'next/image';
+import { Product_Mock } from '@/lib/mocks/mocks';
+import { cn, shortenProductName } from '@/lib/utils';
+import ProductCardPricing from './producat-card-pricing';
+import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 
 export function ProductCard({
   product,
@@ -15,7 +15,7 @@ export function ProductCard({
     <LocalizedClientLink href={`/products/${product.id}`}>
       <article
         className={cn(
-          "group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer",
+          'group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer',
           containerStyles
         )}
       >

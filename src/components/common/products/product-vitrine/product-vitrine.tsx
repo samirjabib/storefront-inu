@@ -13,10 +13,13 @@ const ProductVitrine = ({
   //add query from server side
   return (
     <section
-      className={cn('px-4 md:px-6 max-w-screen-xl mx-auto py-16', className)}
+      className={cn(
+        'px-4 md:px-6 max-w-screen-xl mx-auto py-6 md:py-16',
+        className
+      )}
     >
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
+        <h2 className="text-xl font-semibold tracking-tight text-gray-800 mb-4">
           {title}
         </h2>
       </div>

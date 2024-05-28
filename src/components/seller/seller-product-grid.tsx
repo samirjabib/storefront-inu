@@ -1,6 +1,5 @@
-import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
-import { ProductCard } from '@/components/common/products/common/product-card/product-card';
 import { Product_Mock } from '@/lib/mocks/mocks';
+import { ProductCardSmall } from '../common/products/common/product-card-small/product-card-small';
 
 export default function SellerProductGrid({
   collection,
@@ -10,14 +9,10 @@ export default function SellerProductGrid({
   return (
     <article className="">
       <section className="flex w-full gap-4">
-        <div className="bg-brand-100 p-6 rounded-lg flex flex-col w-full">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full border-2 border-red-00">
+        <div className="bg-brand-100 p-4 md:p-6  md:rounded-lg flex flex-col w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full bg-white rounded-lg border border-gray-200">
             {collection.map((product) => (
-              <ProductCard
-                containerStyles="max-w-full"
-                product={product}
-                key={product.id}
-              />
+              <ProductCardSmall product={product} containerStyles="w-full" />
             ))}
           </div>
         </div>

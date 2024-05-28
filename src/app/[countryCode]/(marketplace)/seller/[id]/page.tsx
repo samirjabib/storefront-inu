@@ -1,3 +1,4 @@
+import ProductVitrine from '@/components/common/products/product-vitrine/product-vitrine';
 import { Separator } from '@/components/common/ui/separator';
 import BreadCrumbSeller from '@/components/seller/seller-bread-crumb';
 import SellerHeader from '@/components/seller/seller-header';
@@ -14,7 +15,7 @@ export default function Seller() {
   return (
     <main>
       <SellerHeader />
-      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8">
+      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8 mt-52">
         <div className="col-span-4">
           <div className="py-6 flex flex-row items-center gap-x-3">
             <h1 className="text-2xl font-semibold tracking-tight text-gray-800">
@@ -35,8 +36,10 @@ export default function Seller() {
           <ProductStorePagination />
         </div>
       </div>
-      <div className="md:hidden mt-16">
-        <div className="px-4 md:px-6 mb-8">
+      <div className="md:hidden mt-52">
+        <div className="">
+          <ProductVitrine title="En promocion" />
+          <ProductVitrine title="Agregado recientemente" />
           <SellerProductGrid
             collection={collection_mock as unknown as Product_Mock[]}
           />

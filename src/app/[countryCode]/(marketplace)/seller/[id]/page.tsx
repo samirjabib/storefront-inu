@@ -1,8 +1,10 @@
 import { Separator } from '@/components/common/ui/separator';
-import BreadCrumbSeller from '@/components/seller/bread-crumb-seller';
+import BreadCrumbSeller from '@/components/seller/seller-bread-crumb';
+import SellerHeader from '@/components/seller/seller-header';
 import SellerProductGrid from '@/components/seller/seller-product-grid';
+import SellerSearch from '@/components/seller/seller-search';
+import { SellerStoreFilterMobile } from '@/components/seller/seller-store-filter-mobile/seller-store-filter-mobile';
 
-import BreadCrumbStore from '@/components/store/bread-crumb-store';
 import ProductStoreFilter from '@/components/store/product-store-filter/product-store-filter';
 import ProductStorePagination from '@/components/store/product-store-pagination';
 
@@ -11,14 +13,7 @@ import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 export default function Seller() {
   return (
     <main>
-      {/* <BreadCrumbSeller /> */}
-      <div className="bg-neutral-50 shadow-sm border border-gray-200 flex flex-row items-center gap-x-4 px-4 md:px-6 py-4 md:py-6">
-        <div className="w-16 h-16 rounded-lg shadow-lg border-2 border-gray-200" />
-        <div>
-          <h1 className="text-base text-gray-800 font-semibold">Gamestop</h1>
-          <p className="text-sm text-gray-500">Tienda oficial</p>
-        </div>
-      </div>
+      <SellerHeader />
       <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8">
         <div className="col-span-4">
           <div className="py-6 flex flex-row items-center gap-x-3">
@@ -40,8 +35,7 @@ export default function Seller() {
           <ProductStorePagination />
         </div>
       </div>
-
-      <div className="md:hidden mt-4">
+      <div className="md:hidden mt-16">
         <div className="px-4 md:px-6 mb-8">
           <SellerProductGrid
             collection={collection_mock as unknown as Product_Mock[]}

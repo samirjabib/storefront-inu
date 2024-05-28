@@ -12,7 +12,7 @@ export default async function Header() {
     <div className="sticky top-0 inset-x-0 z-50 group bg-brand-500 border-b border-brand-500">
       <header className="relative p-4 md:p-6 duration-200 max-w-7xl mx-auto">
         <nav className="flex flex-col lg:flex-row h-full gap-4">
-          <div className="flex flex-1 items-center justify-between mb-4 lg:mb-0 gap-4">
+          <div className="flex flex-1 items-center justify-between lg:mb-0 gap-4">
             <div className="flex items-center w-full gap-4">
               <SideMenu regions={regions} />
               <Search className="hidden lg:flex lg:flex-grow lg:max-w-xl" />

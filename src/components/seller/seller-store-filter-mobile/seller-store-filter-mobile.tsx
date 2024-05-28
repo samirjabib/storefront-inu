@@ -9,17 +9,17 @@ import {
 
 import { SlidersHorizontal, X } from 'lucide-react';
 
-import ProductFilterPrice from '../product-store-filter/product-filter-price';
-import ProductFilterBrand from '../product-store-filter/product-filter-brand';
-import ProductFilterDiscount from '../product-store-filter/product-filter-discount';
-import ProductFilterAvalability from '../product-store-filter/product-availability';
-import ProductFilterCondition from '../product-store-filter/product-filter-condition';
-import ProductFilterSeller from '../product-store-filter/product-filter-seller';
-import ProductFilterRating from '../product-store-filter/product-filter-rating';
 import { Button } from '@/components/common/ui/button';
 import { useState } from 'react';
+import ProductFilterPrice from '@/components/store/product-store-filter/product-filter-price';
+import ProductFilterBrand from '@/components/store/product-store-filter/product-filter-brand';
+import ProductFilterDiscount from '@/components/store/product-store-filter/product-filter-discount';
+import ProductFilterAvalability from '@/components/store/product-store-filter/product-availability';
+import ProductFilterCondition from '@/components/store/product-store-filter/product-filter-condition';
+import ProductFilterSeller from '@/components/store/product-store-filter/product-filter-seller';
+import ProductFilterRating from '@/components/store/product-store-filter/product-filter-rating';
 
-export function ProductStoreFilterMobile() {
+export function SellerStoreFilterMobile() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Sheet
@@ -29,7 +29,7 @@ export function ProductStoreFilterMobile() {
       }}
     >
       <SheetTrigger asChild>
-        <SlidersHorizontal className="text-white" size={28} />
+        <SlidersHorizontal className="text-gray-500" size={28} />
       </SheetTrigger>
       <SheetContent className="overflow-y-scroll w-full p-0">
         <SheetHeader className="px-4 pt-4 fixed top-0 left-0 w-full bg-white z-20">

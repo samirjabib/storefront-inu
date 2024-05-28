@@ -9,11 +9,11 @@ import {
 
 export default function BreadCrumbSeller() {
   return (
-    <Breadcrumb className="max-w-7xl mx-auto px-4 md:px-6 pt-8">
+    <Breadcrumb className="pb-4 pt-2">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/" className="text-xs">
-            Vendedor Oficial
+            Volver
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator>
@@ -21,7 +21,7 @@ export default function BreadCrumbSeller() {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="/components" className="text-xs text-gray-800">
-            Importaciones Arturia
+            Gamestop
           </BreadcrumbLink>
         </BreadcrumbItem>
       </BreadcrumbList>

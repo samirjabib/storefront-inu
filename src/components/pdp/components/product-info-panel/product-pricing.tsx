@@ -3,7 +3,7 @@ import { Product_Mock } from '@/lib/mocks/mocks';
 export default function ProductPricing({ product }: { product: Product_Mock }) {
 	if (product.has_disccount && product.price_with_disccount) {
 		return (
-			<div className='flex mt-2 gap-2 flex-col lg:flex-row lg:items-center lg:gap-4 mb-4'>
+			<div className='flex mt-2 gap-2 flex-col lg:flex-row lg:items-center lg:gap-4 mb-4 lg:align-baseline '>
 				<p className='text-base text-gray-300 line-through'>
 					$ {product.price}
 				</p>
@@ -12,7 +12,7 @@ export default function ProductPricing({ product }: { product: Product_Mock }) {
 						$ {product.price_with_disccount}
 					</p>
 					{product.has_disccount && (
-						<span className='bg-accent-secondary-500 text-sm px-4 py-1 text-white rounded-full'>
+						<span className='bg-accent-secondary-500 text-xs px-2 py-1 text-white rounded-full'>
 							-17% OFF
 						</span>
 					)}

@@ -1,4 +1,3 @@
-import { Separator } from '../common/ui/separator';
 import { PdpBreadcrumb } from './components/pdp-breadcrumb';
 import ProductVitrine from './components/product-img-gallery/product-img-gallery';
 import ProductInfoPanel from './components/product-info-panel/product-info-panel';

@@ -3,6 +3,8 @@ import ProductInfoPanelHeader from './product-info-panel-header';
 import ProductName from './product-name';
 import ProductPricing from './product-pricing';
 import ProductReview from './product-review';
+import ProductPaymentMethods from './product-payment-methods/product-payment-methods';
+import ProductPayWithAddi from './product-pay-with-addi';
 
 export default function ProductImgGallery() {
 	return (
@@ -11,6 +13,8 @@ export default function ProductImgGallery() {
 			<ProductName />
 			<ProductReview review_rating={4.5} />
 			<ProductPricing product={collection_mock[4] as unknown as Product_Mock} />
+			<ProductPayWithAddi />
+			<ProductPaymentMethods />
 		</section>
 	);
 }

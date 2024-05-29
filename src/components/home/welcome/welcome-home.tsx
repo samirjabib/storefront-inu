@@ -5,10 +5,10 @@ export default function WelcomeHome() {
 				Bienvenidos a [MARKET-PLACE]
 			</h1>
 			<p className='text-sm font-medium  text-center max-w-screen-md mx-auto'>
-				Somos un marketplace privado especializado en{' '}
-				<span className='font-bold'>tecnología</span>. Seleccionamos a los
-				mejores vendedores del mercado, asegurando la máxima calidad y
-				confiabilidad en cada producto que ofrecemos.
+				Somos un marketplace especializado en{' '}
+				<span className='font-bold'>Mascotas</span>. Seleccionamos a los mejores
+				vendedores del mercado, asegurando la máxima calidad y confiabilidad en
+				cada producto que ofrecemos.
 			</p>
 		</div>
 	);

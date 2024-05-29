@@ -14,7 +14,7 @@ export type Product_Mock = {
 export const collection_mock = [
 	{
 		id: 1,
-		img_url: assets.iphone,
+		img_url: assets.dog_food_1,
 		product_name: 'Apple iPhone 15 (128 GB) - Blanco',
 		price: '3.189.000',
 		has_disccount: true,
@@ -24,7 +24,7 @@ export const collection_mock = [
 	},
 	{
 		id: 2,
-		img_url: assets.ps5,
+		img_url: assets.dog_food_2,
 		product_name:
 			'Consola Sony Playstation 5 Slim Version Lector Disco Japonesa Ps5 1TB SSD Blanco',
 		price: '2.989.900',
@@ -35,7 +35,7 @@ export const collection_mock = [
 	},
 	{
 		id: 3,
-		img_url: assets.smart_home,
+		img_url: assets.dog_food_3,
 		product_name:
 			'Google Nest Hub 2nd Gen con asistente virtual Google Assistant, pantalla integrada de 7" charcoal 110V/220V',
 		price: '520.000',
@@ -46,7 +46,7 @@ export const collection_mock = [
 	},
 	{
 		id: 4,
-		img_url: assets.gafas,
+		img_url: assets.dog_food_1,
 		product_name:
 			'Lentes De Realidad Virtual Vr Oculus Quest 2 Advanced 128 Gb Color Blanco',
 		price: '520.000',
@@ -57,7 +57,7 @@ export const collection_mock = [
 	},
 	{
 		id: 5,
-		img_url: assets.iphone,
+		img_url: assets.dog_food_2,
 		product_name: 'Apple iPhone 15 (128 GB) - Blanco',
 		price: '3.189.000',
 		has_disccount: true,
@@ -67,7 +67,7 @@ export const collection_mock = [
 	},
 	{
 		id: 6,
-		img_url: assets.ps5,
+		img_url: assets.dog_food_3,
 		product_name:
 			'Consola Sony Playstation 5 Slim Version Lector Disco Japonesa Ps5 1TB SSD Blanco',
 		price: '2.989.900',
@@ -78,7 +78,7 @@ export const collection_mock = [
 	},
 	{
 		id: 7,
-		img_url: assets.smart_home,
+		img_url: assets.dog_food_1,
 		product_name:
 			'Google Nest Hub 2nd Gen con asistente virtual Google Assistant, pantalla integrada de 7" charcoal 110V/220V',
 		price: '520.000',
@@ -89,7 +89,7 @@ export const collection_mock = [
 	},
 	{
 		id: 8,
-		img_url: assets.gafas,
+		img_url: assets.dog_food_2,
 		product_name:
 			'Lentes De Realidad Virtual Vr Oculus Quest 2 Advanced 128 Gb Color Blanco',
 		price: '3.189.000',
@@ -100,7 +100,7 @@ export const collection_mock = [
 	},
 	{
 		id: 9,
-		img_url: assets.iphone,
+		img_url: assets.dog_food_3,
 		product_name: 'Apple iPhone 15 (128 GB) - Blanco',
 		price: '3.189.000',
 		has_disccount: false,
@@ -110,7 +110,7 @@ export const collection_mock = [
 	},
 	{
 		id: 10,
-		img_url: assets.ps5,
+		img_url: assets.dog_food_1,
 		product_name:
 			'Consola Sony Playstation 5 Slim Version Lector Disco Japonesa Ps5 1TB SSD Blanco',
 		price: '2.989.900',
@@ -122,7 +122,7 @@ export const collection_mock = [
 	},
 	{
 		id: 11,
-		img_url: assets.smart_home,
+		img_url: assets.dog_food_2,
 		free_delivery: true,
 
 		product_name:
@@ -134,7 +134,7 @@ export const collection_mock = [
 	},
 	{
 		id: 12,
-		img_url: assets.gafas,
+		img_url: assets.dog_food_3,
 		product_name:
 			'Lentes De Realidad Virtual Vr Oculus Quest 2 Advanced 128 Gb Color Blanco',
 		price: '520.000',
@@ -145,7 +145,7 @@ export const collection_mock = [
 	},
 	{
 		id: 13,
-		img_url: assets.iphone,
+		img_url: assets.dog_food_1,
 		product_name: 'Apple iPhone 15 (128 GB) - Blanco',
 		price: '3.189.000',
 		price_with_disccount: '4.469.900',
@@ -154,7 +154,7 @@ export const collection_mock = [
 	},
 	{
 		id: 14,
-		img_url: assets.ps5,
+		img_url: assets.dog_food_2,
 		product_name:
 			'Consola Sony Playstation 5 Slim Version Lector Disco Japonesa Ps5 1TB SSD Blanco',
 		price: '2.989.900',
@@ -164,7 +164,7 @@ export const collection_mock = [
 	},
 	{
 		id: 15,
-		img_url: assets.smart_home,
+		img_url: assets.dog_food_3,
 		product_name:
 			'Google Nest Hub 2nd Gen con asistente virtual Google Assistant, pantalla integrada de 7" charcoal 110V/220V',
 		price: '520.000',
@@ -174,7 +174,7 @@ export const collection_mock = [
 	},
 	{
 		id: 16,
-		img_url: assets.gafas,
+		img_url: assets.dog_food_1,
 		product_name:
 			'Lentes De Realidad Virtual Vr Oculus Quest 2 Advanced 128 Gb Color Blanco',
 		price: '520.000',

@@ -15,7 +15,7 @@ import {
 export default function ProductPaymentMethodsMobile() {
 	return (
 		<Drawer>
-			<DrawerTrigger className='text-brand-500 underline-offset-4 hover:underline justify-start flex text-sm'>
+			<DrawerTrigger className='link justify-start flex text-sm'>
 				Ver metodos de pago
 			</DrawerTrigger>
 			<DrawerContent>

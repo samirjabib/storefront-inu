@@ -13,10 +13,7 @@ export function ProductPaymentMethodsDesktop() {
 	return (
 		<Dialog>
 			<DialogTrigger asChild>
-				<Button
-					variant='link'
-					className='text-brand-500/80 justify-start p-0 text-sm'
-				>
+				<Button variant='link' className='link justify-start p-0 text-sm'>
 					{' '}
 					Ver metodos de pago
 				</Button>

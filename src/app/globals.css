@@ -61,6 +61,6 @@
 /* Components and states */
 @layer utilities {
 	.link {
-		@apply text-brand-500 underline-offset-4 hover:underline;
+		@apply text-blue-500 underline-offset-4 hover:underline;
 	}
 }

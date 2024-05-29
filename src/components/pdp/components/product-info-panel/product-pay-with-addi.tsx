@@ -17,9 +17,7 @@ export default function ProductPayWithAddi() {
 					paga a credito en
 					<Image alt='addi' src={assets.addi} width={28} height={28} />
 					<span className='font-semibold'>hasta 6 cuotas!</span> -
-					<span className='text-brand-500 underline-offset-4 group-hover:underline'>
-						revisa si aplicas
-					</span>
+					<span className='link'>revisa si aplicas</span>
 				</div>
 			</div>
 		</div>

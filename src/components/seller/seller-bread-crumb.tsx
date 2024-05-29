@@ -7,9 +7,9 @@ import {
   BreadcrumbSeparator,
 } from '../common/ui/breadcrumb';
 
-export default function BreadCrumbSeller() {
+export default function SellBreadCumb() {
   return (
-    <Breadcrumb className="pb-4 pt-2">
+    <Breadcrumb className="pb-4 pt-2 md:pt-0">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/" className="text-xs">

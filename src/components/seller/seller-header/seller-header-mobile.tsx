@@ -1,11 +1,11 @@
-import BreadCrumbSeller from './seller-bread-crumb';
 import { Star } from 'lucide-react';
-import SellerSearch from './seller-search';
-import { SellerStoreFilterMobile } from './seller-store-filter-mobile/seller-store-filter-mobile';
+import BreadCrumbSeller from '../seller-bread-crumb';
+import SellerSearch from '../seller-search';
+import { SellerStoreFilterMobile } from '../seller-store-filter-mobile/seller-store-filter-mobile';
 
-export default function SellerHeader() {
+export default function SellerHeaderMobile() {
   return (
-    <div className="w-full fixed top-10 z-30 py-6">
+    <div className="w-full top-10 z-30 py-6 fixed md:hidden">
       <div className="max-w-7xl mx-auto">
         <header className="bg-white gap-x-4 px-4 md:px-6 py-4 md:py-6 border-b border-gray-200 flex flex-col">
           <BreadCrumbSeller />

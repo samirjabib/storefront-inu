@@ -1,5 +1,4 @@
 'use client';
-import { SlidersHorizontal } from 'lucide-react';
 import Search from './search';
 import { usePathname } from 'next/navigation';
 import { ProductStoreFilterMobile } from '@/components/store/product-store-filter-mobile/product-store-filter-mobile';

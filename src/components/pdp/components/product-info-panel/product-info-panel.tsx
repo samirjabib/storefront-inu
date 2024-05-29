@@ -9,7 +9,9 @@ import ProductBuyNow from './product-buy-now';
 import ProductAddToCart from './product-add-to-cart';
 import ProductAdditionalInformation from './product-additional-information/product-additional-information';
 import { Separator } from '@/components/common/ui/separator';
-import ProductDetails from './product-details/product-details';
+import ProductDetails from './product-details';
+import ProductDescription from './product-description';
+import { ProductSpecifications } from './product-specification';
 
 export default function ProductInfoPanel() {
 	return (
@@ -30,7 +32,14 @@ export default function ProductInfoPanel() {
 				<Separator className='my-4' />
 				<ProductAdditionalInformation />
 			</div>
-			<ProductDetails />
+			<div className='flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6'>
+				<ProductDetails />
+				<ProductDescription />
+				<ProductSpecifications />
+			</div>
+			<div className='flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6'>
+				product review
+			</div>
 		</section>
 	);
 }

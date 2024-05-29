@@ -1,10 +1,8 @@
-export default function ProductDetails() {
+export default function ProductDescription() {
 	return (
-		<div className='flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6'>
-			<h3 className='text-base font-bold text-neutral-900'>
-				Detalles del producto
-			</h3>
-			<p>
+		<div className='w-full flex flex-col mb-4'>
+			<h3 className='text-base font-bold mb-4'>Descripcion</h3>
+			<p className='text-base'>
 				Con tu consola PlayStation 5 tendrás entretenimiento asegurado todos los
 				días. Su tecnología fue creada para poner nuevos retos tanto a jugadores
 				principiantes como expertos.

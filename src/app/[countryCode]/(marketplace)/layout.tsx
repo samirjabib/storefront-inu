@@ -6,13 +6,15 @@ import { Metadata } from 'next';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://localhost:8000';
 
 export const metadata: Metadata = {
-	metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(BASE_URL),
 };
 
 export default async function StoreLayout({
-	children,
+  children,
+  params,
 }: {
-	children: React.ReactNode;
+  children: React.ReactNode;
+  params: string;
 }) {
 	return (
 		<div className='bg-neutral-100'>

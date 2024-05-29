@@ -5,44 +5,44 @@ import ProductCardPricing from './product-card-pricing';
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 
 export function ProductCard({
-	product,
-	containerStyles,
+  product,
+  containerStyles,
 }: {
-	product: Product_Mock;
-	containerStyles?: string;
+  product: Product_Mock;
+  containerStyles?: string;
 }) {
-	return (
-		<LocalizedClientLink href={`/products/${product.id}`}>
-			<article
-				className={cn(
-					'group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer',
-					containerStyles
-				)}
-			>
-				<header className='flex max-h-48 min-h-48 w-full mb-4 relative'>
-					<Image
-						src={product.img_url}
-						alt={product.product_name}
-						width={208}
-						height={228}
-						className='object-contain rounded-lg w-full'
-					/>
-					{product.has_disccount && (
-						<span className='bg-accent-secondary-500 text-sm absolute px-2 text-white rounded-lg'>
-							-17%
-						</span>
-					)}
-				</header>
-				<section>
-					<h3
-						id={`product-name-${product.id}`}
-						className='text-sm group-hover:text-brand-500'
-					>
-						{shortenProductName(product.product_name)}
-					</h3>
-					<ProductCardPricing product={product} />
-				</section>
-			</article>
-		</LocalizedClientLink>
-	);
+  return (
+    <LocalizedClientLink href={`/products/${product.id}`}>
+      <article
+        className={cn(
+          'group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer',
+          containerStyles
+        )}
+      >
+        <header className="flex max-h-48 min-h-48 w-full mb-4 relative">
+          <Image
+            src={product.img_url}
+            alt={product.product_name}
+            width={208}
+            height={228}
+            className="object-contain rounded-lg w-full"
+          />
+          {product.has_disccount && (
+            <span className="bg-accent-secondary-500 text-sm absolute px-2 text-white rounded-lg">
+              -17%
+            </span>
+          )}
+        </header>
+        <section>
+          <h3
+            id={`product-name-${product.id}`}
+            className="text-sm group-hover:text-brand-500"
+          >
+            {shortenProductName(product.product_name)}
+          </h3>
+          <ProductCardPricing product={product} />
+        </section>
+      </article>
+    </LocalizedClientLink>
+  );
 }

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Product_Mock } from '@/lib/mocks/mocks';
 import { cn, shortenProductName } from '@/lib/utils';
-import ProductCardPricing from './producat-card-pricing';
+import ProductCardPricing from './product-card-pricing';
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 
 export function ProductCard({

@@ -14,10 +14,12 @@ export default function WelcomeHome() {
       </div>
 
       <p className="text-sm font-medium  text-center max-w-screen-md mx-auto">
-        Somos un marketplace especializado en{' '}
-        <span className="font-bold">Mascotas</span>. Seleccionamos a los mejores
-        vendedores del mercado, asegurando la máxima calidad y confiabilidad en
-        cada producto que ofrecemos.
+        ¡Bienvenido al mejor marketplace para mascotas! Seleccionamos a los
+        mejores vendedores para garantizar productos y servicios de alta
+        calidad.{' '}
+        <span className="text-neutral-900 font-bold">
+          Porque tu mejor amigo merece lo mejor
+        </span>
       </p>
     </div>
   );

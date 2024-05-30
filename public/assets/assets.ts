@@ -6,6 +6,12 @@ import dummy_1920x1080 from './dummy-product-images/1980x1080.png';
 import max_banner from './hero-banners/max-banner.gif';
 import addi_icon from './payment-methods-logos/addi-icon.png';
 import addi from './payment-methods-logos/addi.svg';
+
+/* Dummys */
+
+import fake_photo_1 from './faker-review-photos/fake-review-photos.webp';
+import fake_photo_2 from './faker-review-photos/fake-review-photo-2.webp';
+
 export const assets = {
   addi,
   addi_icon,
@@ -14,4 +20,6 @@ export const assets = {
   dog_food_3,
   dummy_1920x1080,
   max_banner,
+  fake_photo_1,
+  fake_photo_2,
 };

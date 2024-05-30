@@ -16,7 +16,7 @@ export default function Rating({ review_rating }: { review_rating: number }) {
   });
 
   return (
-    <div className="flex w-full gap-2 items-center cursor-pointer mt-4">
+    <div className="flex w-full gap-2 items-center cursor-pointer my-4">
       <span className="text-3xl font-semibold text-neutral-900 ">
         {review_rating}
       </span>

@@ -20,14 +20,14 @@ export default function Home() {
       <FlashSalesGrid
         collection={collection_mock as unknown as Product_Mock[]}
       />
-      <ProductVitrine title="Lo nuevo" />
-      <Banner data={dummieData} />
+      <ProductVitrine title="Lo nuevo" className="pb-0" />
+      <Banner data={dummieData} className="py-6" />
       <PopularCategoryGrid
         collection={collection_mock as unknown as Product_Mock[]}
       />
-      <ProductVitrine title="Mas vendido de Apple" className="py-8" />
-      <ProductVitrine title="Mas vendido de Xiaomi" className="py-8" />
-      <ProductVitrine title="Mas vendido de Hawei" className="py-8" />
+      <ProductVitrine title="Mas vendido en juguetes" />
+      <ProductVitrine title="Mas vendido en higiene" />
+      <ProductVitrine title="Mas vendido de medicina" className="pb-0" />
       <FilterCategories />
       <Promises />
     </main>

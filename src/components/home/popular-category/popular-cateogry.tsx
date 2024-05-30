@@ -10,7 +10,7 @@ export default function PopularCategoryGrid({
   return (
     <article className="px-4 lg:px-6 max-w-screen-xl mx-auto py-6">
       <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
-        Smart home
+        Alimentos para perro
       </h2>
       <section className="flex w-full gap-4">
         <section className="w-1/2 hidden flex-col gap-6 lg:flex">

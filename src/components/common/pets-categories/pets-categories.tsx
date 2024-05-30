@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from '../ui/carousel';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 const categories = [
   { image: assets.dog, label: 'Perros' },
@@ -21,9 +22,11 @@ const categories = [
   { image: assets.chicken, label: 'Granja y mas' },
 ];
 
-export default function PetsCategories() {
+export default function PetsCategories({ className }: { className?: string }) {
   return (
-    <div className="mx-auto max-w-screen-xl px-4 md:px-6 w-full pb-12">
+    <div
+      className={cn('mx-auto max-w-screen-xl px-4 md:px-6 w-full', className)}
+    >
       <Carousel
         opts={{
           align: 'start',

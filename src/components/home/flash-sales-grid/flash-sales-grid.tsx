@@ -2,14 +2,19 @@ import LocalizedClientLink from '@/components/common/localized-client-link/local
 import { ProductCard } from '@/components/common/products/common/product-card/product-card';
 import { Separator } from '@/components/common/ui/separator';
 import { Product_Mock } from '@/lib/mocks/mocks';
+import { cn } from '@/lib/utils';
 
 export default function FlashSalesGrid({
   collection,
+  className,
 }: {
   collection: Product_Mock[];
+  className?: string;
 }) {
   return (
-    <article className="px-4 lg:px-6 max-w-screen-xl mx-auto mb-6">
+    <article
+      className={cn('px-4 lg:px-6 max-w-screen-xl mx-auto mb-6', className)}
+    >
       <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
         ⚡Ventas Flash
       </h2>

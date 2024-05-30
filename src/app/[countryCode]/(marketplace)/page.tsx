@@ -8,6 +8,7 @@ import PopularCategoryGrid from '@/components/home/popular-category/popular-cate
 import Promises from '@/components/common/promises/promises';
 import WelcomeHome from '@/components/home/welcome/welcome-home';
 import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
+import PetCarouselCategories from '@/components/common/pets-categories/pets-categories';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <WelcomeHome />
       <ProductVitrine title="Lo mas vendido" />
       <BannerGrid />
+      <PetCarouselCategories />
       <FlashSalesGrid
         collection={collection_mock as unknown as Product_Mock[]}
       />
@@ -29,7 +31,7 @@ export default function Home() {
       <ProductVitrine title="Mas vendido en higiene" />
       <ProductVitrine title="Mas vendido de medicina" className="pb-0" />
       <FilterCategories />
-      <Promises />
+      <Promises classNameContainer="pt-8" />
     </main>
   );
 }

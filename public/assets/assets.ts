@@ -12,6 +12,14 @@ import addi from './payment-methods-logos/addi.svg';
 import fake_photo_1 from './faker-review-photos/fake-review-photos.webp';
 import fake_photo_2 from './faker-review-photos/fake-review-photo-2.webp';
 
+import cat from './pets-categories/cat.png';
+import bird from './pets-categories/bird.png';
+import chicken from './pets-categories/chicken.png';
+import dog from './pets-categories/dog.png';
+import rat from './pets-categories/rat.png';
+import fish from './pets-categories/fish.png';
+import reptile from './pets-categories/rep.png';
+
 export const assets = {
   addi,
   addi_icon,
@@ -22,4 +30,11 @@ export const assets = {
   max_banner,
   fake_photo_1,
   fake_photo_2,
+  cat,
+  bird,
+  dog,
+  fish,
+  rat,
+  reptile,
+  chicken,
 };

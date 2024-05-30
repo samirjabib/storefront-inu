@@ -10,26 +10,26 @@ import WelcomeHome from '@/components/home/welcome/welcome-home';
 import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 
 export default function Home() {
-	return (
-		<main className='bg-neutral-100'>
-			<FilterCategories />
-			<Banner data={dummieData} />
-			<WelcomeHome />
-			<ProductVitrine title='Lo mas vendido' />
-			<BannerGrid />
-			<FlashSalesGrid
-				collection={collection_mock as unknown as Product_Mock[]}
-			/>
-			<ProductVitrine title='Lo nuevo' />
-			<Banner data={dummieData} />
-			<PopularCategoryGrid	
-				collection={collection_mock as unknown as Product_Mock[]}
-			/>
-			<ProductVitrine title='Mas vendido de Apple' className='py-8' />
-			<ProductVitrine title='Mas vendido de Xiaomi' className='py-8' />
-			<ProductVitrine title='Mas vendido de Hawei' className='py-8' />
-			<FilterCategories />
-			<Promises />
-		</main>
-	);
+  return (
+    <main className="bg-neutral-100">
+      <FilterCategories />
+      <Banner data={dummieData} />
+      <WelcomeHome />
+      <ProductVitrine title="Lo mas vendido" />
+      <BannerGrid />
+      <FlashSalesGrid
+        collection={collection_mock as unknown as Product_Mock[]}
+      />
+      <ProductVitrine title="Lo nuevo" />
+      <Banner data={dummieData} />
+      <PopularCategoryGrid
+        collection={collection_mock as unknown as Product_Mock[]}
+      />
+      <ProductVitrine title="Mas vendido de Apple" className="py-8" />
+      <ProductVitrine title="Mas vendido de Xiaomi" className="py-8" />
+      <ProductVitrine title="Mas vendido de Hawei" className="py-8" />
+      <FilterCategories />
+      <Promises />
+    </main>
+  );
 }

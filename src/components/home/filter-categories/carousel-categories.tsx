@@ -10,17 +10,17 @@ import { GiDogBowl, GiJumpingDog, GiToothbrush } from 'react-icons/gi';
 import { GiHeartNecklace } from 'react-icons/gi';
 
 const categories = [
-  { icon: Dog, label: 'Perros' },
-  { icon: Cat, label: 'Gatos' },
-  { icon: Fish, label: 'Mas animales' },
-  { icon: GiJumpingDog, label: 'Juguetes' },
+  { icon: Dog, label: 'Alimento para perros' },
+  { icon: Cat, label: 'Alimento para gatos' },
+  { icon: Fish, label: 'Alimento para mas animales' },
+  { icon: Bone, label: 'Juguetes' },
   { icon: GiHeartNecklace, label: 'Correas y Collares' },
   { icon: GiToothbrush, label: 'Higiene' },
   { icon: Tablets, label: 'Medicina & Antiparacitarios' },
   { icon: Bed, label: 'Camas para mascotas' },
+  { icon: Candy, label: 'Premios y golosinas' },
   { icon: GiDogBowl, label: 'Platos para comer' },
   { icon: Bone, label: 'Accesorios' },
-  { icon: Candy, label: 'Premios y golosinas' },
 ];
 
 export function CarouselCategories() {

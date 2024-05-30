@@ -5,6 +5,7 @@ import Search from './search';
 import Link from 'next/link';
 import ActionsBar from './actions-bar';
 import AuthModal from '@/components/auth/auth-modal';
+import Logo from '@/components/common/logo/logo';
 
 export default async function Header() {
   const regions = await listRegions().then((regions) => regions);

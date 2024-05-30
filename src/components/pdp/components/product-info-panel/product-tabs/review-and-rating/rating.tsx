@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { ChevronRight, Star } from 'lucide-react';
 
 export default function Rating({ review_rating }: { review_rating: number }) {
   const review_number_rounded = Math.round(review_rating);
@@ -16,13 +16,18 @@ export default function Rating({ review_rating }: { review_rating: number }) {
   });
 
   return (
-    <div className="flex w-full gap-2 items-center cursor-pointer">
+    <div className="flex w-full gap-2 items-center cursor-pointer mt-4">
       <span className="text-3xl font-semibold text-neutral-900 ">
         {review_rating}
       </span>
-      <div className="flex flex-col">
-        <span className="flex gap-px">{stars}</span>
-        <span className="text-neutral-500">46 comentarios</span>
+      <div className="flex justify-between items-center w-full">
+        <div className="flex flex-col">
+          <span className="flex gap-px">{stars}</span>
+          <span className="text-neutral-500">46 comentarios</span>
+        </div>
+        <div>
+          <ChevronRight size={36} />
+        </div>
       </div>
     </div>
   );

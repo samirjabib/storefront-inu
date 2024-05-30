@@ -3,24 +3,24 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/common/ui/carousel';
-import { MdPhoneIphone, MdSpeaker } from 'react-icons/md';
-import { FaLaptop } from 'react-icons/fa';
-import { TbSmartHome, TbHeadphonesFilled } from 'react-icons/tb';
-import { IoGameController } from 'react-icons/io5';
-import { PiTelevisionSimpleFill } from 'react-icons/pi';
-import { BsSmartwatch } from 'react-icons/bs';
+
+import { Bed, Bone, Candy, Cat, Dog, Fish, Tablets } from 'lucide-react';
+
+import { GiDogBowl, GiJumpingDog, GiToothbrush } from 'react-icons/gi';
+import { GiHeartNecklace } from 'react-icons/gi';
 
 const categories = [
-  { icon: TbSmartHome, label: 'Perros' },
-  { icon: MdPhoneIphone, label: 'Gatos' },
-  { icon: BsSmartwatch, label: 'Snacks' },
-  { icon: FaLaptop, label: 'Juguetes' },
-  { icon: IoGameController, label: 'Arenas' },
-  { icon: PiTelevisionSimpleFill, label: 'Belleza e Higiene' },
-  { icon: TbHeadphonesFilled, label: 'Antiparasitantes' },
-  { icon: TbHeadphonesFilled, label: 'Componentes PC' },
-  { icon: MdSpeaker, label: 'Producción musical' },
-  { icon: BsSmartwatch, label: 'Relojes inteligentes' },
+  { icon: Dog, label: 'Perros' },
+  { icon: Cat, label: 'Gatos' },
+  { icon: Fish, label: 'Mas animales' },
+  { icon: GiJumpingDog, label: 'Juguetes' },
+  { icon: GiHeartNecklace, label: 'Correas y Collares' },
+  { icon: GiToothbrush, label: 'Higiene' },
+  { icon: Tablets, label: 'Medicina & Antiparacitarios' },
+  { icon: Bed, label: 'Camas para mascotas' },
+  { icon: GiDogBowl, label: 'Platos para comer' },
+  { icon: Bone, label: 'Accesorios' },
+  { icon: Candy, label: 'Premios y golosinas' },
 ];
 
 export function CarouselCategories() {

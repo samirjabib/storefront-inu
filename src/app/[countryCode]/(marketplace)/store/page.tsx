@@ -1,7 +1,7 @@
 import { dummieData } from '@/components/common/banner/data';
 import { Separator } from '@/components/common/ui/separator';
-import FilterCategories from '@/components/home/filter-categories/filter-categories';
-import Promises from '@/components/home/promises/promises';
+import FilterCategories from '@/components/common/filter-categories/filter-categories';
+import Promises from '@/components/common/promises/promises';
 
 import BreadCrumbStore from '@/components/store/bread-crumb-store';
 import ProductStoreFilter from '@/components/store/product-store-filter/product-store-filter';

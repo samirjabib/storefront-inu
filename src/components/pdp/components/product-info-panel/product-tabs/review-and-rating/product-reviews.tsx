@@ -15,7 +15,9 @@ export default function ProductReviews() {
               <StarList size={12} review_rating={4} />
               <span className="text-neutral-500 text-xs">09 ene. 2024</span>
             </div>
-            <div>Se ve de buena calidad. Muy practica.</div>
+            <div className="text-neutral-900 text-sm">
+              Se ve de buena calidad. Muy practica.
+            </div>
             <Separator />
           </div>
         ))}

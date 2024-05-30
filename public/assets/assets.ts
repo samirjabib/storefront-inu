@@ -3,7 +3,7 @@ import dog_food_2 from './dummy-product-images/alimento-dog-2.png';
 import dog_food_3 from './dummy-product-images/alimento-dog-3.webp';
 
 import dummy_1920x1080 from './dummy-product-images/1980x1080.png';
-import max_banner from './hero-banners/MAX-BANNER.jpg';
+import max_banner from './hero-banners/max-banner.png';
 
 export const assets = {
   dog_food_1,

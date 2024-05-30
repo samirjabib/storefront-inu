@@ -21,7 +21,7 @@ const categories = [
   { image: assets.chicken, label: 'Granja y mas' },
 ];
 
-export default function BannerSwiper() {
+export default function PetsCategories() {
   return (
     <div className="mx-auto max-w-screen-xl px-4 md:px-6 w-full pb-12">
       <Carousel
@@ -34,7 +34,7 @@ export default function BannerSwiper() {
           {categories.map((item) => (
             <CarouselItem className="-ml-3 basis-5/12 md:basis-1/6 flex flex-col items-center justify-center gap-y-2">
               <Link
-                className="border shadow-sm border-neutral-200  rounded-full p-2 bg-gray-200 cursor-pointer"
+                className="border shadow-sm border-neutral-200  rounded-full p-3 flex items-center justify-center bg-gray-200 cursor-pointer"
                 href={'/'}
               >
                 <Image

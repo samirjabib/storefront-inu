@@ -36,7 +36,7 @@ export function ProductCard({
         <section>
           <h3
             id={`product-name-${product.id}`}
-            className="text-sm group-hover:text-brand-500"
+            className="text-sm group-hover:text-primary"
           >
             {shortenProductName(product.product_name)}
           </h3>

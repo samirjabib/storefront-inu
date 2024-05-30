@@ -6,7 +6,7 @@ export default function Promises() {
         {Array.from({ length: 4 }).map((item) => {
           return (
             <div className="flex items-row items-center flex-row gap-x-4 border border-gray-200 w-full p-3 rounded-lg bg-neutral-50">
-              <div className="bg-brand-100 rounded-full shadow-xs w-12 h-12 border border-brand-500 flex items-center justify-center">
+              <div className="bg-brand-100 rounded-full shadow-xs w-12 h-12 border border-primary flex items-center justify-center">
                 <Package size={24} className="text-gray-500" />
               </div>
               <div>

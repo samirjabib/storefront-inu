@@ -14,9 +14,8 @@ export default function WelcomeHome() {
       </div>
 
       <p className="text-sm font-medium  text-center max-w-screen-md mx-auto">
-        ¡Bienvenido al mejor marketplace para mascotas! Seleccionamos a los
-        mejores vendedores para garantizar productos y servicios de alta
-        calidad.{' '}
+        Somos el mejor marketplace para mascotas! Seleccionamos a los mejores
+        vendedores para garantizar productos y servicios de alta calidad.{' '}
         <span className="text-neutral-900 font-bold">
           Porque tu mejor amigo merece lo mejor💕!
         </span>

@@ -18,7 +18,7 @@ export default function WelcomeHome() {
         mejores vendedores para garantizar productos y servicios de alta
         calidad.{' '}
         <span className="text-neutral-900 font-bold">
-          Porque tu mejor amigo merece lo mejor
+          Porque tu mejor amigo merece lo mejor💕!
         </span>
       </p>
     </div>

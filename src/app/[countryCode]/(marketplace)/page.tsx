@@ -15,9 +15,9 @@ export default function Home() {
     <main className="bg-neutral-100">
       <FilterCategories />
       <Banner data={dummieData} />
-      <WelcomeHome />
+      <WelcomeHome className="py-10" />
       <ProductVitrine title="Lo mas vendido" />
-      <BannerGrid />
+      <BannerGrid className="py-12" />
       <PetCarouselCategories />
       <FlashSalesGrid
         collection={collection_mock as unknown as Product_Mock[]}

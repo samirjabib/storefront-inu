@@ -1,5 +1,6 @@
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { ProductCard } from '@/components/common/products/common/product-card/product-card';
+import { Separator } from '@/components/common/ui/separator';
 import { Product_Mock } from '@/lib/mocks/mocks';
 
 export default function FlashSalesGrid({
@@ -12,6 +13,7 @@ export default function FlashSalesGrid({
       <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
         ⚡Ventas Flash
       </h2>
+      <Separator className="mb-4 bg-neutral-200" />
       <section className="flex w-full gap-4">
         <div className="bg-brand-100 p-6 rounded-lg flex flex-col  w-full lg:w-1/2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">

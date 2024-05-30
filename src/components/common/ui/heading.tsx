@@ -7,7 +7,9 @@ type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 const title = cva('', {
   variants: {
     size: {
-      mainTitle: ['main-title'],
+      mainTitle: [
+        'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl',
+      ],
     },
   },
   defaultVariants: {
@@ -21,7 +23,7 @@ interface TitleProps
   as?: HeadingLevel;
 }
 
-const Title: FC<TitleProps> = ({
+const Heading: FC<TitleProps> = ({
   as: Component = 'h2',
   className,
   size,
@@ -32,4 +34,4 @@ const Title: FC<TitleProps> = ({
   return <Component className={classNames} {...props} />;
 };
 
-export default Title;
+export default Heading;

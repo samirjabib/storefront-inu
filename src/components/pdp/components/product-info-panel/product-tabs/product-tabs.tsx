@@ -5,6 +5,7 @@ import {
   TabsTrigger,
 } from '@/components/common/ui/tabs';
 import ReviewAndRatings from './review-and-rating/review-and-ratings';
+import ProductFaqs from './faqs/product-faqs';
 
 export default function ProductTabs() {
   return (
@@ -16,7 +17,9 @@ export default function ProductTabs() {
       <TabsContent value="account">
         <ReviewAndRatings />
       </TabsContent>
-      <TabsContent value="password">Faqs</TabsContent>
+      <TabsContent value="password">
+        <ProductFaqs />
+      </TabsContent>
     </Tabs>
   );
 }

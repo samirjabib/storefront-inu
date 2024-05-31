@@ -39,7 +39,7 @@ export function ProductStoreFilterMobile() {
               <span className="font-medium">Filtro</span>
               <span className="text-xs">(4)</span>
             </h2>
-            <Button variant={'ghost'} className="p-0 text-sm text-brand-500">
+            <Button variant={'ghost'} className="p-0 text-sm text-primary">
               Limpiar
             </Button>
           </div>

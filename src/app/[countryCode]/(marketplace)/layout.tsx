@@ -16,12 +16,12 @@ export default async function StoreLayout({
   children: React.ReactNode;
   params: string;
 }) {
-	return (
-		<div className='bg-neutral-100'>
-			<UnderDevelopment />
-			<Header />
-			{children}
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="bg-background">
+      <UnderDevelopment />
+      <Header />
+      {children}
+      <Footer />
+    </div>
+  );
 }

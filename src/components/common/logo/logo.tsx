@@ -5,7 +5,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
     <span className="relative inline-block">
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave' : null
         )}
       >
@@ -13,7 +13,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave-delay-200' : null
         )}
       >
@@ -21,7 +21,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave-delay-400' : null
         )}
       >
@@ -29,7 +29,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave-delay-600' : null
         )}
       >
@@ -37,7 +37,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave-delay-800' : null
         )}
       >
@@ -45,7 +45,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-orange-300',
+          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
           animate ? 'animate-wave-delay-1000' : null
         )}
       >

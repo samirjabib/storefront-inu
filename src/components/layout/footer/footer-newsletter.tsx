@@ -38,7 +38,7 @@ export default function FooterNewsletter() {
           <div className="bg-white border border-neutral-200 flex flex-row items-center gap-x-2 py-3 px-4 rounded-lg cursor-pointer">
             <FaGoogle
               size={32}
-              className="text-neutral-800 hover:text-brand-500 transition-all"
+              className="text-neutral-800 hover:text-primary transition-all"
             />
 
             <div>
@@ -53,7 +53,7 @@ export default function FooterNewsletter() {
           <div className="bg-white border border-neutral-200 flex flex-row items-center gap-x-2 py-3 px-4 rounded-lg cursor-pointer">
             <FaApple
               size={32}
-              className="text-neutral-800 hover:text-brand-500 transition-all"
+              className="text-neutral-800 hover:text-primary transition-all"
             />
             <div className="">
               <p className="text-neutral-800 text-xs font-normal">
@@ -70,31 +70,31 @@ export default function FooterNewsletter() {
         <LocalizedClientLink href="/">
           <FaYoutube
             size={20}
-            className="text-neutral-800 cursor-pointer hover:text-brand-500 transition-all"
+            className="text-neutral-800 cursor-pointer hover:text-primary transition-all"
           />
         </LocalizedClientLink>
         <LocalizedClientLink href="/">
           <FaXTwitter
             size={20}
-            className="text-neutral-800 cursor-pointer hover:-brand-500 transition-all"
+            className="text-neutral-800 cursor-pointer hover:-primary transition-all"
           />
         </LocalizedClientLink>
         <LocalizedClientLink href="/">
           <FaDribbble
             size={20}
-            className="text-neutral-800 cursor-pointer hover:text-brand-500 transition-all"
+            className="text-neutral-800 cursor-pointer hover:text-primary transition-all"
           />
         </LocalizedClientLink>
         <LocalizedClientLink href="/">
           <FaFacebookF
             size={20}
-            className="text-neutral-800 cursor-pointer hover:text-brand-500 transition-all"
+            className="text-neutral-800 cursor-pointer hover:text-primary transition-all"
           />
         </LocalizedClientLink>
         <LocalizedClientLink href="/">
           <ImLinkedin2
             size={20}
-            className="text-neutral-800 cursor-pointer hover:text-purple-500 transition-all"
+            className="text-neutral-800 cursor-pointer hover:text-primary transition-all"
           />
         </LocalizedClientLink>
       </div>

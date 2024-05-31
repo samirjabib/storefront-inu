@@ -16,15 +16,15 @@ export default function Promises({
     >
       <div
         className={cn(
-          'grid grid-cols-1 gap-5 w-full md:grid-cols-4 bg-brand-100 py-6 px-4 rounded-lg',
+          'grid grid-cols-1 gap-5 w-full md:grid-cols-4 bg-neutral-200 py-6 px-4 rounded-lg',
           className
         )}
       >
         {Array.from({ length: 4 }).map((item) => {
           return (
             <div className="flex items-row items-center flex-row gap-x-4 border border-gray-200 w-full p-3 rounded-lg bg-neutral-50">
-              <div className="bg-brand-100 rounded-full shadow-xs w-12 h-12 border border-primary flex items-center justify-center">
-                <Package size={24} className="text-gray-500" />
+              <div className="bg-brand-50 rounded-full shadow-xs w-12 h-12 border border-brand-300 flex items-center justify-center">
+                <Package size={24} className="text-emerald-500" />
               </div>
               <div>
                 <h3 className="text-xs text-gray-800 font-semibold">

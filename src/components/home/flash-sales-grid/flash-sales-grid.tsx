@@ -19,7 +19,7 @@ export default function FlashSalesGrid({
       </Heading>
       <Separator className="bg-neutral-200 mb-4" />
       <section className="flex w-full gap-4">
-        <div className="bg-secondary p-6 rounded-lg flex flex-col w-full lg:w-1/2">
+        <div className="bg-neutral-200 p-6 rounded-lg flex flex-col w-full lg:w-1/2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
             {collection.slice(0, 4).map((product) => (
               <ProductCard

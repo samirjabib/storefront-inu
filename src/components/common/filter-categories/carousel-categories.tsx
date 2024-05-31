@@ -3,6 +3,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from '@/components/common/ui/carousel';
+import { cn } from '@/lib/utils';
 
 import { Bed, Bone, Candy, Cat, Dog, Fish, Tablets } from 'lucide-react';
 
@@ -23,13 +24,13 @@ const categories = [
   { icon: Bone, label: 'Accesorios' },
 ];
 
-export function CarouselCategories() {
+export function CarouselCategories({ className }: { className?: string }) {
   return (
     <Carousel
       opts={{
         align: 'start',
       }}
-      className="w-full mx-auto max-w-screen-xl py-6 px-4 md:px-6"
+      className={cn('w-full mx-auto max-w-screen-xl', className)}
     >
       <CarouselContent>
         {categories.map((category, index) => (

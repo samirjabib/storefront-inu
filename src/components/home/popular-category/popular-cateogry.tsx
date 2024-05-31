@@ -1,17 +1,21 @@
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { ProductCard } from '@/components/common/products/common/product-card/product-card';
+import Heading from '@/components/common/ui/heading';
 import { Product_Mock } from '@/lib/mocks/mocks';
+import { cn } from '@/lib/utils';
 
 export default function PopularCategoryGrid({
   collection,
+  className,
 }: {
   collection: Product_Mock[];
+  className?: string;
 }) {
   return (
-    <article className="px-4 lg:px-6 max-w-screen-xl mx-auto py-6">
-      <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
-        Smart home
-      </h2>
+    <article className={cn('px-4 lg:px-6 max-w-screen-xl mx-auto', className)}>
+      <Heading size={'titleSmall'} className="mb-4">
+        Alimentos para perro
+      </Heading>
       <section className="flex w-full gap-4">
         <section className="w-1/2 hidden flex-col gap-6 lg:flex">
           <div className="w-full h-1/2 bg-gray-200 rounded-lg"></div>

@@ -41,7 +41,7 @@ export default function AuthOptionsContainer() {
         <AuthOptionButton
           onClick={() => console.log('click')}
           type="button"
-          className="bg-primary text-white hover:bg-primary/90"
+          className="bg-primary text-white transition-all"
         >
           <BsGoogle size={24} /> Continuar con google
         </AuthOptionButton>

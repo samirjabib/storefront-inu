@@ -73,4 +73,8 @@
   .link {
     @apply text-blue-500 underline-offset-4 hover:underline;
   }
+
+  .parragraph {
+    @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
 }

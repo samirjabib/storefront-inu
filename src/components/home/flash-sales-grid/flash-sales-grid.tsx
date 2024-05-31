@@ -1,19 +1,25 @@
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { ProductCard } from '@/components/common/products/common/product-card/product-card';
+import Heading from '@/components/common/ui/heading';
+import { Separator } from '@/components/common/ui/separator';
 import { Product_Mock } from '@/lib/mocks/mocks';
+import { cn } from '@/lib/utils';
 
 export default function FlashSalesGrid({
   collection,
+  className,
 }: {
   collection: Product_Mock[];
+  className?: string;
 }) {
   return (
-    <article className="px-4 lg:px-6 max-w-screen-xl mx-auto">
-      <h2 className="text-2xl font-semibold tracking-tight text-gray-800 mb-4">
+    <article className={cn('px-4 lg:px-6 max-w-screen-xl mx-auto', className)}>
+      <Heading size={'titleSmall'} as="h2" className="mb-4">
         ⚡Ventas Flash
-      </h2>
+      </Heading>
+      <Separator className="bg-neutral-200 mb-4" />
       <section className="flex w-full gap-4">
-        <div className="bg-brand-100 p-6 rounded-lg flex flex-col  w-full lg:w-1/2">
+        <div className="bg-brand-100 p-6 rounded-lg flex flex-col w-full lg:w-1/2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
             {collection.slice(0, 4).map((product) => (
               <ProductCard

@@ -2,6 +2,7 @@ import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 import ProductCarousel from '../common/product-carousel';
 import { Separator } from '@/components/common/ui/separator';
 import { cn } from '@/lib/utils';
+import Heading from '../../ui/heading';
 
 const ProductVitrine = ({
   title = 'Lo mas vendido',
@@ -14,9 +15,9 @@ const ProductVitrine = ({
   return (
     <section className={cn('px-4 md:px-6 max-w-screen-xl mx-auto', className)}>
       <div>
-        <h2 className="text-xl font-semibold tracking-tight text-gray-800 mb-4">
+        <Heading size={'titleSmall'} as="h2" className="mb-4">
           {title}
-        </h2>
+        </Heading>
       </div>
       <Separator className="mb-4 bg-neutral-200" />
       <ProductCarousel

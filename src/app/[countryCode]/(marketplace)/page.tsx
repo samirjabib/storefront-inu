@@ -21,6 +21,7 @@ export default function Home() {
       <PetCarouselCategories className="pb-16" />
       <FlashSalesGrid
         collection={collection_mock as unknown as Product_Mock[]}
+        className="pb-16"
       />
       <ProductVitrine title="Lo nuevo" className="pb-0" />
       <Banner data={dummieData} className="py-6" />

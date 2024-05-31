@@ -7,7 +7,7 @@ export default function WelcomeHome({ className }: { className?: string }) {
   return (
     <div className={cn('px-4', className)}>
       <div className="flex flex-row items-baseline gap-x-1 justify-center">
-        <Heading as="h1" size={'mainTitle'} className="text-center">
+        <Heading as="h1" size={'titleBig'} className="text-center">
           Bienvenidos <br />a <br />
           <Logo animate />
         </Heading>

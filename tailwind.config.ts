@@ -22,7 +22,7 @@ const config = {
         'brand-50': '#ecfdf5',
         'brand-100': '#d1fae5',
         'brand-300': '#6ee7b7',
-        primary: '#10b981',
+        'brand-500': '#10b981',
         'brand-700': '#047857',
         'brand-900': '#064e3b',
         'accent-primary-50': '#fff7ed',
@@ -55,6 +55,7 @@ const config = {
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
+          700: 'hsl(var(--primary-700))',
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',

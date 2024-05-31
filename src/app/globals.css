@@ -4,14 +4,16 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 220, 14%, 96%;
+    --foreground: 0, 0%, 4%;
+    --card: 0, 0%, 100%;
+    --card-foreground: 0, 0%, 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+    --primary-300: 156, 84%, 67%;
     --primary: 160, 84%, 39%;
-    --primary-foreground: 210 40% 98%;
+    --primary-700: 163, 84%, 24%;
+    --primary-foreground: 152, 81%, 96%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
@@ -58,8 +60,11 @@
   }
 }
 
-/* Components and states */
 @layer utilities {
+  /* Typos */
+
+  /* Components and states */
+
   .link {
     @apply text-blue-500 underline-offset-4 hover:underline;
   }

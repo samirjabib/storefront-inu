@@ -11,7 +11,7 @@ import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 
 export default function Home() {
   return (
-    <main className="bg-neutral-100">
+    <main className="bg-background">
       <FilterCategories />
       <Banner data={dummieData} />
       <WelcomeHome />

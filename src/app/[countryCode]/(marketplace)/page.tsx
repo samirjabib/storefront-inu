@@ -29,11 +29,11 @@ export default function Home() {
         className="pb-16"
         collection={collection_mock as unknown as Product_Mock[]}
       />
-      <ProductVitrine title="Mas vendido en juguetes" className="pb-10" />
-      <ProductVitrine title="Mas vendido en higiene" className="pb-10" />
-      <ProductVitrine title="Mas vendido de medicina" />
+      <ProductVitrine title="Mas vendido en juguetes" className="pb-16" />
+      <ProductVitrine title="Mas vendido en higiene" className="pb-16" />
+      <ProductVitrine title="Mas vendido de medicina" className="pb-10" />
       <FilterCategories />
-      <Promises classNameContainer="pb-6" />
+      <Promises classNameContainer="pt-10 pb-16" />
     </main>
   );
 }

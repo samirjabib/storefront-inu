@@ -1,6 +1,6 @@
 export default function ProductName() {
   return (
-    <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight mb-2">
+    <h1 className="h1 card-foreground">
       Alimento Perro Max Vita Adultos Buffet Pollo Y Vegetales - 2 Kg
     </h1>
   );

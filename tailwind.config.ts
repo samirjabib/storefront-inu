@@ -81,6 +81,10 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        disccount: {
+          DEFAULT: 'hsl(var(--disccount))',
+          foreground: 'hsl(var(--disccount-foreground))',
+        },
       },
       borderRadius: {
         lg: 'var(--radius)',

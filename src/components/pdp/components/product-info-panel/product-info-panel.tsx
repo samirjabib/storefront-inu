@@ -1,7 +1,7 @@
 import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 import ProductInfoPanelHeader from './product-info-panel-header';
 import ProductName from './product-name';
-import ProductPricing from './product-pricing';
+import ProductPricing from './product-pricing/product-pricing';
 import ProductReview from './product-review';
 import ProductPaymentMethods from './product-payment-methods/product-payment-methods';
 import ProductPayWithAddi from './product-pay-with-addi';
@@ -17,15 +17,15 @@ import ProductTabs from './product-tabs/product-tabs';
 export default function ProductInfoPanel() {
   return (
     <section className="w-full lg:w-1/2 gap-4 flex flex-col">
-      <div className="flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6">
+      <div className="flex flex-col w-full bg-white rounded-lg shadow-sm p-4 gap-4 lg:p-6">
         <ProductInfoPanelHeader />
         <ProductName />
         <ProductReview review_rating={4.5} />
         <ProductPricing
           product={collection_mock[4] as unknown as Product_Mock}
         />
-        <ProductPayWithAddi />
         <ProductPaymentMethods />
+        <ProductPayWithAddi />
         <div className="w-full flex flex-col gap-2">
           <ProductBuyNow />
           <ProductAddToCart />

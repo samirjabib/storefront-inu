@@ -1,11 +1,10 @@
 import Logo from '@/components/common/logo/logo';
-import { PawPrint } from 'lucide-react';
 
 export default function WelcomeHome() {
   return (
     <div className="py-12 px-4 ">
       <div className="flex flex-row items-baseline gap-x-1 mb-4 justify-center">
-        <h1 className="text-center text-neutral-900 font-bold text-3xl lg:text-5xl">
+        <h1 className="text-center h1">
           Bienvenidos a <Logo animate />
         </h1>
       </div>

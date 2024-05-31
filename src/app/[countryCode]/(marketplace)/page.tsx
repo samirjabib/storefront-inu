@@ -23,16 +23,17 @@ export default function Home() {
         collection={collection_mock as unknown as Product_Mock[]}
         className="pb-16"
       />
-      <ProductVitrine title="Lo nuevo" className="pb-0" />
-      <Banner data={dummieData} className="py-6" />
+      <ProductVitrine title="Lo nuevo" className="pb-16" />
+      <Banner data={dummieData} className="pb-16" />
       <PopularCategoryGrid
+        className="pb-16"
         collection={collection_mock as unknown as Product_Mock[]}
       />
-      <ProductVitrine title="Mas vendido en juguetes" />
-      <ProductVitrine title="Mas vendido en higiene" />
-      <ProductVitrine title="Mas vendido de medicina" className="pb-0" />
+      <ProductVitrine title="Mas vendido en juguetes" className="pb-10" />
+      <ProductVitrine title="Mas vendido en higiene" className="pb-10" />
+      <ProductVitrine title="Mas vendido de medicina" />
       <FilterCategories />
-      <Promises classNameContainer="pt-8" />
+      <Promises classNameContainer="pb-6" />
     </main>
   );
 }

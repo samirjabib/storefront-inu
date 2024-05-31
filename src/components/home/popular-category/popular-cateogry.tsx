@@ -2,14 +2,17 @@ import LocalizedClientLink from '@/components/common/localized-client-link/local
 import { ProductCard } from '@/components/common/products/common/product-card/product-card';
 import Heading from '@/components/common/ui/heading';
 import { Product_Mock } from '@/lib/mocks/mocks';
+import { cn } from '@/lib/utils';
 
 export default function PopularCategoryGrid({
   collection,
+  className,
 }: {
   collection: Product_Mock[];
+  className?: string;
 }) {
   return (
-    <article className="px-4 lg:px-6 max-w-screen-xl mx-auto py-6">
+    <article className={cn('px-4 lg:px-6 max-w-screen-xl mx-auto', className)}>
       <Heading size={'titleSmall'} className="mb-4">
         Alimentos para perro
       </Heading>

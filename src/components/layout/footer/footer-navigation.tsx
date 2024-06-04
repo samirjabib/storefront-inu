@@ -8,18 +8,18 @@ export default function FooterNavigation() {
           Compañia
         </h3>
         <ul className="flex flex-col gap-y-2">
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">
               ¿Como funciona Shopet?
             </LocalizedClientLink>
           </li>
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">
               Terminos y condiciones
             </LocalizedClientLink>
           </li>
 
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">
               Políticas de privacidad
             </LocalizedClientLink>
@@ -31,16 +31,16 @@ export default function FooterNavigation() {
           Soporte y ayuda
         </h3>
         <ul className="flex flex-col gap-y-2">
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">
               Quiero ser proveedor
             </LocalizedClientLink>
           </li>
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">Contáctanos</LocalizedClientLink>
           </li>
 
-          <li className="font-normal text-neutral-500 text-base">
+          <li className="font-normal text-neutral-500 text-xs md:text-sm">
             <LocalizedClientLink href="/">FAQs</LocalizedClientLink>
           </li>
         </ul>

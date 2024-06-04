@@ -15,7 +15,7 @@ export default function WelcomeHome({ className }: { className?: string }) {
           <Logo animate />
         </Heading>
       </div>
-      <p className="text-center max-w-2xl mx-auto parragraph">
+      <p className="text-center max-w-xl mx-auto parragraph text-sm md:text-base">
         Somos el mejor marketplace para mascotas! Seleccionamos a los mejores
         vendedores para garantizar productos y servicios de alta calidad.{' '}
         <span className="font-bold">

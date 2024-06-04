@@ -37,10 +37,10 @@ export function CarouselCategories({ className }: { className?: string }) {
           <CarouselItem key={index} className="basis-auto">
             <div className="group flex flex-row items-center gap-x-1 bg-neutral-50 border border-neutral-200 shadow-sm rounded-full px-4 py-2 cursor-pointer">
               <category.icon
-                size={20}
+                size={16}
                 className="text-neutral-500 group-hover:text-brand-700"
               />
-              <h2 className="text-sm text-neutral-800 font-medium group-hover:text-brand-700">
+              <h2 className="text-xs md:text-sm text-neutral-500 font-medium group-hover:text-brand-700">
                 {category.label}
               </h2>
             </div>

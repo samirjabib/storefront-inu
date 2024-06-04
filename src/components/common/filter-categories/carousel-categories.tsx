@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 
 import { Bed, Bone, Candy, Cat, Dog, Fish, Tablets } from 'lucide-react';
 
-import { GiDogBowl, GiJumpingDog, GiToothbrush } from 'react-icons/gi';
+import { GiDogBowl, GiToothbrush } from 'react-icons/gi';
 import { GiHeartNecklace } from 'react-icons/gi';
 
 const categories = [

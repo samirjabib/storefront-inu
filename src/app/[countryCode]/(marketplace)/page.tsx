@@ -16,6 +16,7 @@ export default function Home() {
       <CarouselCategories className="py-6 px-4 md:px-6" />
       <Banner data={dummieData} />
       <WelcomeHome className="py-10" />
+      <Promises classNameContainer="pb-10" />
       <ProductVitrine title="Lo mas vendido" className="pb-16" />
       <BannerGrid className="pb-16" />
       <PetCarouselCategories className="pb-16" />
@@ -29,11 +30,10 @@ export default function Home() {
         className="pb-16"
         collection={collection_mock as unknown as Product_Mock[]}
       />
-      <ProductVitrine title="Mas vendido en juguetes" className="pb-16" />
-      <ProductVitrine title="Mas vendido en higiene" className="pb-16" />
-      <ProductVitrine title="Mas vendido de medicina" className="pb-10" />
+
+      <ProductVitrine title="Mas vendido de medicina" className="" />
       <CarouselCategories className="py-6 px-4 md:px-6" />
-      <Promises classNameContainer="pt-10 pb-16" />
+      <Promises classNameContainer="pb-16" />
     </main>
   );
 }

@@ -4,18 +4,20 @@
 
 @layer base {
   :root {
-    --background: 0 0% 96%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --background: 220, 14%, 96%;
+    --foreground: 0, 0%, 12%;
+    --card: 0, 0%, 100%;
+    --card-foreground: 0, 0%, 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
+    --primary-300: 156, 84%, 67%;
     --primary: 160, 84%, 39%;
-    --primary-foreground: 210 40% 98%;
+    --primary-700: 163, 84%, 24%;
+    --primary-foreground: 152, 81%, 96%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
@@ -24,6 +26,9 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 156, 72%, 67%;
     --radius: 0.5rem;
+    /* E-commerce  */
+    --disccount: 0, 84%, 60%;
+    --disccount-foreground: 0, 86%, 97%;
   }
 
   .dark {
@@ -58,8 +63,13 @@
   }
 }
 
-/* Components and states */
 @layer utilities {
+  /* Typos */
+  .h1 {
+    @apply text-2xl lg:text-3xl font-extrabold tracking-tight;
+  }
+  /* Components and states */
+
   .link {
     @apply text-blue-500 underline-offset-4 hover:underline;
   }

@@ -53,7 +53,7 @@ export default function Promises({
               {item.icon}
             </div>
             <div>
-              <h3 className="text-xs text-gray-800 font-semibold">
+              <h3 className="text-sm text-gray-700 font-semibold">
                 {item.title}
               </h3>
               <p className="text-xs text-gray-500">{item.description}</p>

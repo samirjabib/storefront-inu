@@ -9,7 +9,7 @@ import AuthButton from './auth-button';
 import AuthLoginWithEmail from './auth-providers/auth-login-with-email';
 import AuthRegisterWithEmail from './auth-providers/auth-register-with-email';
 
-export default function AuthModal() {
+export default function AuthModal({ children }: { children: React.ReactNode }) {
   const searchParams = useSearchParams();
 
   const isOpen = searchParams.get('login_modal_open');
@@ -28,9 +28,7 @@ export default function AuthModal() {
   return (
     <Dialog open={isOpen === 'true' ? true : false} onOpenChange={onCloseModal}>
       <DialogTrigger asChild>
-        <AuthButton className="flex flex-col">
-          <User size={24} className="text-white" />
-        </AuthButton>
+        <AuthButton className="flex flex-col">{children}</AuthButton>
       </DialogTrigger>
       <DialogContent className="flex h-screen items-center bg-brand-100 px-8 py-6 md:h-auto md:max-w-sm lg:max-h-[95%]">
         <GetAuthComponent />

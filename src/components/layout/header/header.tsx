@@ -1,6 +1,6 @@
 import { listRegions } from '@/lib/data/data';
 import SideMenu from './side-menu';
-import { Bell, Heart, ShoppingCart } from 'lucide-react';
+import { Bell, Heart, ShoppingCart, User } from 'lucide-react';
 import Search from './search';
 import Link from 'next/link';
 import ActionsBar from './actions-bar';
@@ -29,7 +29,7 @@ export default async function Header() {
                 <Bell size={24} className="text-white" />
               </div>
               <Heart size={24} className="text-white" />
-              <AuthModal />
+              <AuthModal children={<User size={24} className="text-white" />} />
               <ShoppingCart size={24} className="text-white" />
             </div>
           </div>

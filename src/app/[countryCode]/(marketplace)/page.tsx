@@ -21,14 +21,14 @@ export default async function Home({
 
   return (
     <main className="bg-neutral-100">
-      <CarouselCategories className="py-6 px-4 md:px-6" />
-      <Banner data={dummieData} />
-      <WelcomeHome className="py-10" />
+      <Banner data={dummieData} className="py-10" />
+      <WelcomeHome className="pb-10" />
       <ProductVitrine title="Lo mas vendido" className="pb-16" />
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
-      <ProductVitrine title="Lo nuevo" className="pb-16" />
-      <Promises classNameContainer="pb-10" />
+      <ProductVitrine title="Lo nuevo" className="pb-6" />
+      <Promises classNameContainer="py-12" />
+      <CarouselCategories className="pb-12 px-4 md:px-6" />
     </main>
   );
 }

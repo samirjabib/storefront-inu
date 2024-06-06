@@ -1,8 +1,9 @@
 import Logo from '@/components/common/logo/logo';
+import { cn } from '@/lib/utils';
 
 export default function WelcomeHome({ className }: { className?: string }) {
   return (
-    <div className="py-12 px-4 ">
+    <div className={cn('px-4', className)}>
       <div className="flex flex-row items-baseline gap-x-1 mb-4 justify-center">
         <h1 className="text-center h1">
           Bienvenidos a <Logo animate />

@@ -11,8 +11,8 @@ export default function Search({ className }: { className?: string }) {
       )}
     >
       <Input
-        placeholder=""
-        className="rounded-full bg-background text-sm md:text-base"
+        placeholder="¿Que buscas?"
+        className="rounded-full bg-background text-sm md:text-base drop-shadow-2xl"
       />
       <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-end pr-4">
         <SearchIcon className="text-muted-foreground" size={24} />

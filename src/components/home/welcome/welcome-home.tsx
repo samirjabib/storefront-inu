@@ -1,14 +1,15 @@
 import Logo from '@/components/common/logo/logo';
+import { cn } from '@/lib/utils';
 
 export default function WelcomeHome({ className }: { className?: string }) {
   return (
-    <div className="py-12 px-4 ">
+    <div className={cn('px-4', className)}>
       <div className="flex flex-row items-baseline gap-x-1 mb-4 justify-center">
         <h1 className="text-center h1">
           Bienvenidos a <Logo animate />
         </h1>
       </div>
-      <p className="text-center max-w-2xl mx-auto parragraph">
+      <p className="text-center max-w-xl mx-auto parragraph text-sm md:text-base">
         Somos el mejor marketplace para mascotas! Seleccionamos a los mejores
         vendedores para garantizar productos y servicios de alta calidad.{' '}
         <span className="font-bold">

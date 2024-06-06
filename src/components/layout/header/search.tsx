@@ -7,7 +7,7 @@ export default function Search({ className }: { className?: string }) {
     <div className={cn('relative flex items-center', className)}>
       <Input
         placeholder="Mas de 2000 productos disponibles"
-        className="rounded-full bg-white"
+        className="rounded-full bg-white text-sm md:text-base"
       />
       <div className="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-end pr-4">
         <SearchIcon className="text-blue-700" size={24} />

@@ -21,7 +21,7 @@ export default function PopularCategoryGrid({
           <div className="w-full h-1/2 bg-gray-200 rounded-lg"></div>
           <div className="w-full h-1/2 bg-gray-200 rounded-lg"></div>
         </section>
-        <div className="bg-brand-100 p-6 rounded-lg flex flex-col  w-full lg:w-1/2">
+        <div className="bg-neutral-200 p-6 rounded-lg flex flex-col  w-full lg:w-1/2">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
             {collection.slice(0, 4).map((product) => (
               <ProductCard

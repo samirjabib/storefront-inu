@@ -13,6 +13,7 @@ import ProductDetails from './product-details';
 import ProductDescription from './product-description';
 import { ProductSpecifications } from './product-specification';
 import ProductTabs from './product-tabs/product-tabs';
+import ProductSku from './product-sku/product-sku';
 
 export default function ProductInfoPanel() {
   return (
@@ -21,6 +22,7 @@ export default function ProductInfoPanel() {
         <ProductInfoPanelHeader />
         <ProductName />
         <ProductReview review_rating={4.5} />
+        <ProductSku />
         <ProductPricing
           product={collection_mock[4] as unknown as Product_Mock}
         />

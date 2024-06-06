@@ -9,7 +9,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
           animate ? 'animate-wave' : null
         )}
       >
-        S
+        I
       </span>
       <span
         className={cn(
@@ -17,7 +17,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
           animate ? 'animate-wave-delay-200' : null
         )}
       >
-        h
+        N
       </span>
       <span
         className={cn(
@@ -25,31 +25,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
           animate ? 'animate-wave-delay-400' : null
         )}
       >
-        o
-      </span>
-      <span
-        className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
-          animate ? 'animate-wave-delay-600' : null
-        )}
-      >
-        p
-      </span>
-      <span
-        className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
-          animate ? 'animate-wave-delay-800' : null
-        )}
-      >
-        e
-      </span>
-      <span
-        className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
-          animate ? 'animate-wave-delay-1000' : null
-        )}
-      >
-        t
+        U
       </span>
     </span>
   );

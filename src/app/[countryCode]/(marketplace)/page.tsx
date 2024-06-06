@@ -28,7 +28,6 @@ export default async function Home({
       <BannerGrid className="pb-16" />
       <ProductVitrine title="Lo nuevo" className="pb-6" />
       <Promises classNameContainer="py-12" />
-      <CarouselCategories className="pb-12 px-4 md:px-6" />
     </main>
   );
 }

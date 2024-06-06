@@ -28,12 +28,7 @@ export default function FooterNewsletter() {
         </div>
       </div>
       <div className="py-5 border-b border-neutral-200">
-        <p className="text-neutral-800 font-medium text-sm mb-3">
-          Muy pronto{' '}
-          <LocalizedClientLink href="/" className="underline">
-            Shopet App
-          </LocalizedClientLink>
-        </p>
+        <p className="text-neutral-800 font-medium text-sm mb-3">Inu app</p>
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="bg-white border border-neutral-200 flex flex-row items-center gap-x-2 py-3 px-4 rounded-lg cursor-pointer">
             <FaGoogle
@@ -42,9 +37,7 @@ export default function FooterNewsletter() {
             />
 
             <div>
-              <p className="text-neutral-800 text-xs font-normal">
-                Descargar en
-              </p>
+              <p className="text-neutral-800 text-xs font-normal">Muy pronto</p>
               <h4 className="text-neutral-800 font-bold text-lg leading-5">
                 Google Play
               </h4>
@@ -56,9 +49,7 @@ export default function FooterNewsletter() {
               className="text-neutral-800 hover:text-primary transition-all"
             />
             <div className="">
-              <p className="text-neutral-800 text-xs font-normal">
-                Descargar en
-              </p>
+              <p className="text-neutral-800 text-xs font-normal">Muy pronto</p>
               <h4 className="text-neutral-800 font-bold text-lg leading-5">
                 AppStore
               </h4>

@@ -24,5 +24,5 @@ export default function ActionsBar() {
     return null;
   }
 
-  return <Search className="md:hidden mt-4" />;
+  return <Search />;
 }

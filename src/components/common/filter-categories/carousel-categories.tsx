@@ -34,7 +34,7 @@ export function CarouselCategories({ className }: { className?: string }) {
     >
       <CarouselContent>
         {categories.map((category, index) => (
-          <CarouselItem key={index} className="basis-auto">
+          <CarouselItem key={category.label} className="basis-auto">
             <div className="group flex flex-row items-center gap-x-1 bg-neutral-50 border border-neutral-200 shadow-sm rounded-full px-4 py-2 cursor-pointer">
               <category.icon
                 size={16}

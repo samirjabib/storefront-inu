@@ -3,10 +3,10 @@ export default function ProductSku() {
     <div className="flex flex-col gap-2">
       <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>
       <div className="flex gap-2">
-        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border border-ring bg-transparent">
+        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border border-ring bg-transparent drop-shadow cursor-pointer">
           12kg
         </div>
-        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border border bg-transparent">
+        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border  bg-transparent">
           6kg
         </div>
       </div>

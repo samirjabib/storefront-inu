@@ -26,7 +26,6 @@ export default async function Home({
       <ProductVitrine title="Lo mas vendido" className="pb-16" />
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
-      <ProductVitrine title="Lo nuevo" className="pb-6" />
       <Promises classNameContainer="py-12" />
     </main>
   );

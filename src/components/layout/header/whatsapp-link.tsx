@@ -10,7 +10,7 @@ export default function WhatsappLink({
 }) {
   return (
     <LocalizedClientLink href="/" className={cn(containerStyles)}>
-      <div className="text-xs md:text-sm font-bold text-brand-100 flex items-center gap-2">
+      <div className="text-xs md:text-sm font-bold text-primary-foreground flex items-center gap-2">
         <FaWhatsapp size={20} />
         ¿Necesitas ayuda? Escribenos.
       </div>

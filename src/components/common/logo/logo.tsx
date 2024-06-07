@@ -5,7 +5,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
     <span className="relative inline-block">
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
+          'inline-block bg-clip-text text-primary',
           animate ? 'animate-wave' : null
         )}
       >
@@ -13,7 +13,7 @@ export default function Logo({ animate }: { animate?: boolean }) {
       </span>
       <span
         className={cn(
-          'inline-block bg-clip-text text-transparent bg-gradient-to-r from-primary to-orange-300',
+          'inline-block bg-clip-text text-primary',
           animate ? 'animate-wave-delay-200' : null
         )}
       >

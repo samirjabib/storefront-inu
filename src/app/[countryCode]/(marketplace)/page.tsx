@@ -10,6 +10,7 @@ import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 import PetCarouselCategories from '@/components/common/pets-categories/pets-categories';
 import { CarouselCategories } from '@/components/common/filter-categories/carousel-categories';
 import { getCollectionsWithProducts } from '@/lib/data/collections';
+import AdoptAPet from '@/components/home/adopt-a-pet/adopt-a-pet';
 
 export default async function Home({
   params: { countryCode },
@@ -27,6 +28,7 @@ export default async function Home({
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
       <Promises classNameContainer="py-12" />
+      <AdoptAPet />
     </main>
   );
 }

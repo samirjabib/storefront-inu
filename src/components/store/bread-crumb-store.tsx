@@ -22,7 +22,7 @@ export default function BreadCrumbStore({ className }: { className?: string }) {
         </BreadcrumbSeparator>
         <BreadcrumbItem>
           <BreadcrumbLink href="/components" className="text-xs text-gray-800">
-            Celulares
+            <h1 className="font-semibold">Perros</h1>
           </BreadcrumbLink>
         </BreadcrumbItem>
       </BreadcrumbList>

@@ -11,7 +11,7 @@ export default function SellerProductGridMobile({
   return (
     <article>
       <section className="flex w-full gap-4 md:hidden">
-        <div className="bg-brand-100 p-4 md:rounded-lg flex flex-col w-full">
+        <div className=" p-4 md:rounded-lg flex flex-col w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full bg-white rounded-lg border border-gray-200">
             {collection.map((product) => {
               return (

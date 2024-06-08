@@ -29,7 +29,7 @@ export function SellerStoreFilterMobile() {
       }}
     >
       <SheetTrigger asChild>
-        <SlidersHorizontal className="text-gray-500" size={28} />
+        <SlidersHorizontal className="text-primary-foreground" size={24} />
       </SheetTrigger>
       <SheetContent className="overflow-y-scroll w-full p-0">
         <SheetHeader className="px-4 pt-4 fixed top-0 left-0 w-full bg-white z-20">

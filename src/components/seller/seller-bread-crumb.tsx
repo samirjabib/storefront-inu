@@ -9,7 +9,7 @@ import {
 
 export default function SellBreadCumb() {
   return (
-    <Breadcrumb className="pb-4 pt-2 md:pt-0">
+    <Breadcrumb className="p-0">
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink href="/" className="text-xs">
@@ -20,8 +20,11 @@ export default function SellBreadCumb() {
           <ChevronRight />
         </BreadcrumbSeparator>
         <BreadcrumbItem>
-          <BreadcrumbLink href="/components" className="text-xs text-gray-800">
-            Gamestop
+          <BreadcrumbLink
+            href="/components"
+            className="text-xs text-gray-800 font-semibold"
+          >
+            Perros
           </BreadcrumbLink>
         </BreadcrumbItem>
       </BreadcrumbList>

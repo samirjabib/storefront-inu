@@ -1,37 +1,24 @@
-import { Star } from 'lucide-react';
-import BreadCrumbSeller from '../seller-bread-crumb';
 import SellerSearch from '../seller-search';
 import { SellerStoreFilterMobile } from '../seller-store-filter-mobile/seller-store-filter-mobile';
+import { ArrowLeft, ShoppingCart } from 'lucide-react';
 
 export default function SellerHeaderMobile() {
   return (
-    <div className="w-full top-10 z-30 py-6 fixed md:hidden">
+    <div className="w-full fixed top-0 z-50">
       <div className="max-w-7xl mx-auto">
-        <header className="bg-white gap-x-4 px-4 md:px-6 py-4 md:py-6 border-b border-gray-200 flex flex-col">
-          <BreadCrumbSeller />
-          <div className="flex flex-row items-center justify-between">
-            <div className="flex flex-row gap-x-4 items-center">
-              <div className="w-16 h-16 bg-gray-200 rounded-lg shadow-lg border-2 border-gray-200" />
-              <div>
-                <h1 className="text-base text-gray-800 font-semibold">
-                  Gamestop
-                </h1>
-                <p className="text-sm text-gray-500">Tienda oficial</p>
-              </div>
-              <div></div>
+        <header className="gap-x-4 p-4 flex flex-row justify-between items-center bg-primary drop-shadow">
+          <div className="flex flex-row gap-x-6">
+            <div className="flex items-center justify-center gap-x-1">
+              <ArrowLeft className="text-primary-foreground" size={24} />
+              <span className="text-primary-foreground text-sm hidden md:block">
+                Regresar
+              </span>
             </div>
-            <div>
-              <h3 className="text-xs text-gray-500">+ 1k ventas</h3>
-              <div className="flex flex-row items-center gap-x-1 justify-end">
-                <Star size={12} className={'fill-yellow-500 text-yellow-600'} />
-                <h3 className="text-sm text-gray-800">4.5</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-row w-full mt-6 items-center gap-x-4">
             <SellerSearch />
+          </div>
+          <div className="flex flex-row gap-x-6">
             <SellerStoreFilterMobile />
+            <ShoppingCart size={24} className="text-primary-foreground" />
           </div>
         </header>
       </div>

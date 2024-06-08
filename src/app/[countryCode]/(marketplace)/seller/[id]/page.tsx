@@ -11,7 +11,11 @@ import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
 export default function Seller() {
   return (
     <main>
-      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8 mt-8">
+      <SellerHeaderMobile />
+      <h1 className="pt-20 pb-4 px-4 md:px-6 font-bold text-base">
+        Alimentos para perro
+      </h1>
+      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8 ">
         <div className="col-span-4">
           <SellerSidebar />
         </div>
@@ -24,8 +28,7 @@ export default function Seller() {
           </div>
         </div>
       </div>
-      <div className="md:hidden pt-24">
-        <SellerHeaderMobile />
+      <div className="md:hidden">
         <BreadCrumbStore />
         <SellerProductGridMobile
           collection={collection_mock as unknown as Product_Mock[]}

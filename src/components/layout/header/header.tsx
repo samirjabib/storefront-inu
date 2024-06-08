@@ -23,8 +23,12 @@ export default async function Header() {
               <WhatsappLink containerStyles="hidden lg:block" />
             </div>
             <div className="flex gap-6 items-center cursor-pointer ">
-              <AuthModal children={<User size={24} className="text-white" />} />
-              <ShoppingCart size={24} className="text-white" />
+              <AuthModal
+                children={
+                  <User size={24} className="text-primary-foreground" />
+                }
+              />
+              <ShoppingCart size={24} className="text-primary-foreground" />
             </div>
           </div>
         </nav>

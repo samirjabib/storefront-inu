@@ -12,10 +12,10 @@ export default function Seller() {
   return (
     <main>
       <SellerHeaderMobile />
-      <h1 className="pt-20 pb-4 px-4 md:px-6 font-bold text-base">
+      <h1 className="pt-20 md:pt-28 pb-4 px-4 font-bold text-base mx-auto max-w-screen-xl">
         Alimentos para perro
       </h1>
-      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 md:px-6 gap-x-8 ">
+      <div className="hidden md:grid grid-cols-12 max-w-7xl mx-auto px-4 gap-x-8 ">
         <div className="col-span-4">
           <SellerSidebar />
         </div>

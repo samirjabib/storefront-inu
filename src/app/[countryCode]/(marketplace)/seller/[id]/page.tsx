@@ -1,9 +1,8 @@
-import ProductVitrine from '@/components/common/products/product-vitrine/product-vitrine';
-
 import SellerHeaderMobile from '@/components/seller/seller-header/seller-header-mobile';
 import SellerProductGrid from '@/components/seller/seller-product-grid/seller-product-grid';
 import SellerProductGridMobile from '@/components/seller/seller-product-grid/seller-product-grid-mobile';
 import SellerSidebar from '@/components/seller/seller-sidebar/seller-sidebar';
+import BreadCrumbStore from '@/components/store/bread-crumb-store';
 
 import ProductStorePagination from '@/components/store/product-store-pagination';
 
@@ -25,10 +24,9 @@ export default function Seller() {
           </div>
         </div>
       </div>
-      <div className="md:hidden mt-52">
+      <div className="md:hidden pt-24">
         <SellerHeaderMobile />
-        <ProductVitrine title="En promocion" />
-        <ProductVitrine title="Agregado recientemente" />
+        <BreadCrumbStore />
         <SellerProductGridMobile
           collection={collection_mock as unknown as Product_Mock[]}
         />

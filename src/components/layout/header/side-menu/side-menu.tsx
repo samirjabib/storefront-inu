@@ -4,11 +4,8 @@ import { Ellipsis } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/common/ui/sheet';
-import { Region } from '@medusajs/medusa';
 
 import { AlignJustify } from 'lucide-react';
 

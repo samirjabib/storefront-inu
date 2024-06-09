@@ -11,17 +11,17 @@ import { GiDogBowl, GiToothbrush } from 'react-icons/gi';
 import { GiHeartNecklace } from 'react-icons/gi';
 
 const categories = [
-  { icon: Dog, label: 'Alimento para perros' },
-  { icon: Cat, label: 'Alimento para gatos' },
-  { icon: Fish, label: 'Alimento para mas animales' },
-  { icon: Bone, label: 'Juguetes' },
-  { icon: GiHeartNecklace, label: 'Correas y Collares' },
-  { icon: GiToothbrush, label: 'Higiene' },
-  { icon: Tablets, label: 'Medicina & Antiparacitarios' },
-  { icon: Bed, label: 'Camas para mascotas' },
-  { icon: Candy, label: 'Premios y golosinas' },
-  { icon: GiDogBowl, label: 'Platos para comer' },
-  { icon: Bone, label: 'Accesorios' },
+  { icon: Dog, label: 'Alimento para perros', id: 1 },
+  { icon: Cat, label: 'Alimento para gatos', id: 2 },
+  { icon: Fish, label: 'Alimento para mas animales', id: 3 },
+  { icon: Bone, label: 'Juguetes', id: 4 },
+  { icon: GiHeartNecklace, label: 'Correas y Collares', id: 5 },
+  { icon: GiToothbrush, label: 'Higiene', id: 6 },
+  { icon: Tablets, label: 'Medicina & Antiparacitarios', id: 7 },
+  { icon: Bed, label: 'Camas para mascotas', id: 8 },
+  { icon: Candy, label: 'Premios y golosinas', id: 9 },
+  { icon: GiDogBowl, label: 'Platos para comer', id: 10 },
+  { icon: Bone, label: 'Accesorios', id: 11 },
 ];
 
 export function CarouselCategories({ className }: { className?: string }) {
@@ -34,7 +34,7 @@ export function CarouselCategories({ className }: { className?: string }) {
     >
       <CarouselContent>
         {categories.map((category, index) => (
-          <CarouselItem key={category.label} className="basis-auto">
+          <CarouselItem key={index} className="basis-auto">
             <div className="group flex flex-row items-center gap-x-1 bg-neutral-50 border border-neutral-200 shadow-sm rounded-full px-4 py-2 cursor-pointer">
               <category.icon
                 size={16}

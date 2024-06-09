@@ -1,4 +1,4 @@
-import { listRegions } from '@/lib/data/data';
+import { listRegions } from '@/lib/actions/data';
 import SideMenu from './side-menu';
 import { Bell, Heart, ShoppingCart, User } from 'lucide-react';
 import Search from './search';

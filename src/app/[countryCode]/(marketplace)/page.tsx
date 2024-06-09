@@ -6,8 +6,9 @@ import BannerGrid from '@/components/home/banner-grid/banner-grid';
 import Promises from '@/components/common/promises/promises';
 import WelcomeHome from '@/components/home/welcome/welcome-home';
 import PetCarouselCategories from '@/components/common/pets-categories/pets-categories';
-import { getCollectionsWithProducts } from '@/lib/data/collections';
+import { getCollectionsWithProducts } from '@/lib/actions/collections';
 import Header from '@/components/layout/header/header';
+import { getCategoriesList } from '@/lib/actions/category';
 
 export default async function Home({
   params: { countryCode },
@@ -15,7 +16,9 @@ export default async function Home({
   params: { countryCode: string };
 }) {
   console.log(countryCode);
-  const collections = await getCollectionsWithProducts(countryCode);
+  const { product_categories } = await getCategoriesList(0, 6);
+
+  console.log(product_categories);
 
   return (
     <main className="bg-neutral-100">

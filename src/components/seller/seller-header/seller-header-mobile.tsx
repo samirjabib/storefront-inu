@@ -4,8 +4,8 @@ import { ArrowLeft, ShoppingCart } from 'lucide-react';
 
 export default function SellerHeaderMobile() {
   return (
-    <div className="w-full fixed top-0 z-50">
-      <div className="max-w-7xl mx-auto">
+    <div className="w-full fixed top-0 z-50 max-w-7xl mx-auto">
+      <div className="">
         <header className="gap-x-4 p-4 flex flex-row justify-between items-center bg-primary drop-shadow">
           <div className="flex flex-row gap-x-6">
             <div className="flex items-center justify-center gap-x-1">

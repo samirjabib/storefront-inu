@@ -32,7 +32,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/lib/data/collections.ts"
+		"src/lib/actions/collections.ts"
 	],
 	"exclude": [
 		"node_modules"

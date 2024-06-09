@@ -6,20 +6,14 @@ import BannerGrid from '@/components/home/banner-grid/banner-grid';
 import Promises from '@/components/common/promises/promises';
 import WelcomeHome from '@/components/home/welcome/welcome-home';
 import PetCarouselCategories from '@/components/common/pets-categories/pets-categories';
-import { getCollectionsWithProducts } from '@/lib/actions/collections';
 import Header from '@/components/layout/header/header';
-import { getCategoriesList } from '@/lib/actions/category';
+import AdoptAPet from '@/components/home/adopt-a-pet/adopt-a-pet';
 
 export default async function Home({
   params: { countryCode },
 }: {
   params: { countryCode: string };
 }) {
-  console.log(countryCode);
-  const { product_categories } = await getCategoriesList(0, 6);
-
-  console.log(product_categories);
-
   return (
     <main className="bg-neutral-100">
       <Header />
@@ -29,7 +23,7 @@ export default async function Home({
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
       <Promises classNameContainer="py-12" />
-      <AdoptAPet />
+      {/* <AdoptAPet /> */}
     </main>
   );
 }

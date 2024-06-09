@@ -29,6 +29,7 @@ export default async function Home({
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
       <Promises classNameContainer="py-12" />
+      <AdoptAPet />
     </main>
   );
 }

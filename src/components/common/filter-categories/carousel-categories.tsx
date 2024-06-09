@@ -32,9 +32,9 @@ export function CarouselCategories({ className }: { className?: string }) {
       }}
       className={cn('w-full mx-auto max-w-screen-xl', className)}
     >
-      <CarouselContent>
-        {categories.map((category, index) => (
-          <CarouselItem key={index} className="basis-auto">
+      {categories.map((category, index) => (
+        <CarouselContent key={index}>
+          <CarouselItem className="basis-auto">
             <div className="group flex flex-row items-center gap-x-1 bg-neutral-50 border border-neutral-200 shadow-sm rounded-full px-4 py-2 cursor-pointer">
               <category.icon
                 size={16}
@@ -45,8 +45,8 @@ export function CarouselCategories({ className }: { className?: string }) {
               </h2>
             </div>
           </CarouselItem>
-        ))}
-      </CarouselContent>
+        </CarouselContent>
+      ))}
     </Carousel>
   );
 }

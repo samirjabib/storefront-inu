@@ -1,6 +1,5 @@
-import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { getCategories } from '@/lib/actions/categories';
-import { cn } from '@/lib/utils';
+import SideBarCategoryTreeAccordion from './side-bar-category-tree-accordion';
 
 export default async function SideMenuNavigation() {
   const { product_categories } = await getCategories(0, 6);
@@ -9,40 +8,27 @@ export default async function SideMenuNavigation() {
     return (
       <div>
         {product_categories.map((category) => {
-          //if product has a parent category return null
+          // Si la categoría tiene una categoría padre, retornar null
           if (category.parent_category) {
             return null;
           }
 
-          //get children on first level of three
-          const categoryChildren = category.category_children?.map((child) => ({
-            name: child.name,
-            handle: child.handle,
-            id: child.id,
-            children: child.category_children ? child.category_children : null,
-          }));
-
-          console.log(categoryChildren);
-
+          // Renderizar la categoría raíz y sus subcategorías
           return (
-            <div key={category.id}>
-              <LocalizedClientLink
-                className={cn(
-                  'hover:text-ui-fg-base',
-                  categoryChildren && 'txt-small-plus'
-                )}
-                href={`/categories/${category.handle}`}
-                data-testid="category-link"
-              >
-                {category.name}
-              </LocalizedClientLink>
-            </div>
+            <SideBarCategoryTreeAccordion
+              key={category.id}
+              category={category}
+            />
           );
         })}
       </div>
     );
   }
+
+  return null;
 }
+
+// Retornar null si no hay categorías
 
 //   product_categories && product_categories?.length > 0 && (
 //     <div className="flex flex-col gap-y-2">

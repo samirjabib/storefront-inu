@@ -18,6 +18,7 @@ export default async function SideMenuNavigation() {
             <SideBarCategoryTreeAccordion
               key={category.id}
               category={category}
+              path="/categories"
             />
           );
         })}

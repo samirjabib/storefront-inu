@@ -14,13 +14,26 @@ const SideMenuNavigation = ({
   );
   const [currentCategory, setCurrentCategory] =
     useState<ProductCategoryWithChildren | null>(null);
+  const [categoryStack, setCategoryStack] = useState<
+    ProductCategoryWithChildren[]
+  >([]);
 
   useEffect(() => {
     setCategories(product_categories);
   }, [product_categories]);
 
   const handleSelectCategory = (category: ProductCategoryWithChildren) => {
+    if (currentCategory) {
+      setCategoryStack([...categoryStack, currentCategory]);
+    }
     setCurrentCategory(category);
+  };
+
+  const handleBack = () => {
+    const newStack = [...categoryStack];
+    const previousCategory = newStack.pop() || null;
+    setCategoryStack(newStack);
+    setCurrentCategory(previousCategory);
   };
 
   const categoriesToDisplay = currentCategory
@@ -32,7 +45,7 @@ const SideMenuNavigation = ({
       {currentCategory && (
         <div className="py-4 border-b w-full">
           <button
-            onClick={() => setCurrentCategory(null)}
+            onClick={handleBack}
             className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1"
           >
             <ArrowLeft className="text-black opacity-60" />

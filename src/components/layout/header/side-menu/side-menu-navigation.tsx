@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import SideBarCategoryTreeAccordion from './side-bar-category-tree-accordion';
 import { ProductCategoryWithChildren } from '@/lib/types/global';
+import { ArrowLeft } from 'lucide-react';
 
 const SideMenuNavigation = ({
   product_categories,
@@ -29,12 +30,15 @@ const SideMenuNavigation = ({
   return (
     <div>
       {currentCategory && (
-        <button
-          onClick={() => setCurrentCategory(null)}
-          className="capitalize text-sm text-primary-foreground/80 cursor-pointer mb-2"
-        >
-          Volver
-        </button>
+        <div className="py-4 border-b w-full">
+          <button
+            onClick={() => setCurrentCategory(null)}
+            className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1"
+          >
+            <ArrowLeft className="text-black opacity-60" />
+            Volver
+          </button>
+        </div>
       )}
       {categoriesToDisplay && categoriesToDisplay.length > 0 ? (
         categoriesToDisplay.map((category) => (

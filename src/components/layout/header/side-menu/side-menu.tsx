@@ -1,6 +1,4 @@
 'use client';
-import { Ellipsis } from 'lucide-react';
-
 import {
   Sheet,
   SheetContent,

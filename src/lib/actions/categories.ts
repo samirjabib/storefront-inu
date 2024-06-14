@@ -15,8 +15,6 @@ export const getCategories = cache(async function (
       throw err;
     });
 
-  console.log(product_categories);
-
   return {
     product_categories,
     count,

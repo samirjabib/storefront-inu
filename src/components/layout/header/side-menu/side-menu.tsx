@@ -20,7 +20,7 @@ const SideMenu = ({ children }: { children: React.ReactNode }) => {
         </h3>
       </SheetTrigger>
       <SheetContent side={'left'} className="bg-neutral-100 p-0 m-0">
-        <div className="pt-20">{children}</div>
+        <div className="px-4">{children}</div>
         <SideMenuHeader />
       </SheetContent>
     </Sheet>

@@ -3,7 +3,7 @@
 import * as React from 'react';
 import * as SheetPrimitive from '@radix-ui/react-dialog';
 import { cva, type VariantProps } from 'class-variance-authority';
-import { X } from 'lucide-react';
+import { Dog, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
@@ -64,14 +64,17 @@ const SheetContent = React.forwardRef<
       className={cn(sheetVariants({ side }), className)}
       {...props}
     >
-      {children}
-      <div className="bg-primary absolute top-0 left-0 w-full flex items-center justify-between p-5">
-        <h2 className="text-sm text-primary-foreground font-bold">Inu</h2>
-        <SheetPrimitive.Close className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
+      <div className="bg-primary w-full flex items-center justify-between p-4">
+        <h2 className="text-sm text-primary-foreground font-bold flex flex-row items-center gap-x-1">
+          <Dog className="text-primary-foreground" />
+          Inu
+        </h2>
+        <SheetPrimitive.Close className="rounded-sm ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
           <X className="h-6 w-6 text-primary-foreground" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </div>
+      {children}
     </SheetPrimitive.Content>
   </SheetPortal>
 ));

@@ -1,6 +1,8 @@
 'use client';
+import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { ProductCategoryWithChildren } from '@/lib/types/global';
 import { cn } from '@/lib/utils';
+import { ChevronRight } from 'lucide-react';
 
 interface SideBarCategoryTreeAccordionProps {
   category: ProductCategoryWithChildren;
@@ -26,24 +28,25 @@ const SideBarCategoryTreeAccordion: React.FC<
   };
 
   return (
-    <div key={category.id} className="ml-3">
+    <div key={category.id} className="border-b py-4">
       {hasChildren ? (
         <div
           onClick={handleCategoryClick}
-          className={cn(
-            'capitalize text-sm text-primary-foreground/80 cursor-pointer'
-          )}
+          className={cn('flex flex-row items-center justify-between')}
         >
-          {category.name}
+          <h3 className="capitalize text-sm text-primary-foreground/80 cursor-pointer">
+            {category.name}
+          </h3>
+          <ChevronRight className="text-black/60" />
         </div>
       ) : (
-        <a
+        <LocalizedClientLink
           href={currentPath}
           className="capitalize text-sm text-primary-foreground/80"
           data-testid="category-link"
         >
           {category.name}
-        </a>
+        </LocalizedClientLink>
       )}
     </div>
   );

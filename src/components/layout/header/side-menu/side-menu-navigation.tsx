@@ -43,11 +43,8 @@ const SideMenuNavigation = ({
   return (
     <div>
       {currentCategory && (
-        <div className="py-4 border-b w-full">
-          <button
-            onClick={handleBack}
-            className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1"
-          >
+        <div className="py-4 border-b w-full" onClick={handleBack}>
+          <button className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1">
             <ArrowLeft className="text-black opacity-60" />
             Volver
           </button>

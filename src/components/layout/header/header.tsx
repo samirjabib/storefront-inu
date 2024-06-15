@@ -6,6 +6,7 @@ import AuthModal from '@/components/auth/auth-modal';
 import WhatsappLink from './whatsapp-link';
 import { ProductCategoryWithChildren } from '@/lib/types/global';
 import SideMenuWrapper from './side-menu/side-menu-wrapper';
+import Link from 'next/link';
 
 export default async function Header() {
   return (
@@ -24,7 +25,9 @@ export default async function Header() {
                   <User size={24} className="text-primary-foreground" />
                 }
               />
-              <ShoppingCart size={24} className="text-primary-foreground" />
+              <Link href={'/checkout/cart'}>
+                <ShoppingCart size={24} className="text-primary-foreground" />
+              </Link>
             </div>
           </div>
         </nav>

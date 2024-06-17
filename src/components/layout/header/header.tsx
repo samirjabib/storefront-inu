@@ -4,7 +4,6 @@ import Search from './search';
 import AuthModal from '@/components/auth/auth-modal';
 
 import WhatsappLink from './whatsapp-link';
-import { ProductCategoryWithChildren } from '@/lib/types/global';
 import SideMenuWrapper from './side-menu/side-menu-wrapper';
 
 export default async function Header() {

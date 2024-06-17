@@ -35,7 +35,10 @@ export default function PetsCategories({ className }: { className?: string }) {
       >
         <CarouselContent className="flex justify-around">
           {categories.map((item) => (
-            <CarouselItem className="-ml-3 basis-5/12 md:basis-1/6 flex flex-col items-center justify-center gap-y-2">
+            <CarouselItem
+              className="-ml-3 basis-5/12 md:basis-1/6 flex flex-col items-center justify-center gap-y-2"
+              key={item.label}
+            >
               <Link
                 className="border shadow-sm border-neutral-200  rounded-full p-3 flex items-center justify-center bg-gray-200 cursor-pointer"
                 href={'/'}

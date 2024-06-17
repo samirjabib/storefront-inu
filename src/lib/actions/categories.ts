@@ -2,7 +2,7 @@ import { cache } from 'react';
 import { ProductCategoryWithChildren } from '../types/global';
 import { medusaClient } from '../config';
 
-export const getCategoriesList = cache(async function (
+export const getCategories = cache(async function (
   offset: number = 0,
   limit: number = 100
 ): Promise<{
@@ -10,7 +10,7 @@ export const getCategoriesList = cache(async function (
   count: number;
 }> {
   const { product_categories, count } = await medusaClient.productCategories
-    .list({ limit, offset }, { next: { tags: ['categories'] } })
+    .list({ limit, offset, include_descendants_tree: true })
     .catch((err) => {
       throw err;
     });

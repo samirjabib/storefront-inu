@@ -13,6 +13,11 @@ const store = JSON.parse(storeData);
 const nextConfig = withStoreConfig({
     features: store.features,
     reactStrictMode: true,
+    experimental: {
+        serverComponentsExternalPackages: [
+            "@medusajs/product",
+        ],
+    },
     images: {
         remotePatterns: [
             {

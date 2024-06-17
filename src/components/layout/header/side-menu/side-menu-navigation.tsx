@@ -12,6 +12,7 @@ const SideMenuNavigation = ({
   const [categories, setCategories] = useState<ProductCategoryWithChildren[]>(
     []
   );
+
   const [currentCategory, setCurrentCategory] =
     useState<ProductCategoryWithChildren | null>(null);
   const [categoryStack, setCategoryStack] = useState<

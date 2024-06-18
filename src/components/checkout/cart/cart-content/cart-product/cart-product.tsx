@@ -24,7 +24,7 @@ export function CartProduct({
       <section className="col-span-4">
         <h3
           id={`product-name-${product.id}`}
-          className="text-xs md:text-sm group-hover:text-foreground mb-2"
+          className="text-sm md:text-sm group-hover:text-foreground mb-2"
         >
           {shortenProductName(product.product_name)}
         </h3>

@@ -1,4 +1,4 @@
-import { Product_Mock } from "@/lib/mocks/mocks";
+import { Product_Mock } from '@/lib/mocks/mocks';
 
 export default function ProductCardSmallPricing({
   product,

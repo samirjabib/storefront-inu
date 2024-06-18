@@ -1,5 +1,6 @@
 import { Product_Mock } from '@/lib/mocks/mocks';
 import { CartProduct } from './cart-product/cart-product';
+import { Separator } from '@/components/common/ui/separator';
 
 export default function CartContent({
   collection,
@@ -7,6 +8,8 @@ export default function CartContent({
   collection: Product_Mock[];
 }) {
   const limitedCollection = collection.slice(0, 2);
+
+  const productNumber = 2;
 
   return (
     <div className="p-4">
@@ -20,6 +23,10 @@ export default function CartContent({
           />
         ))}
       </div>
+      <p className="py-3 text-muted-foreground text-sm">
+        {productNumber} Productos
+      </p>
+      <Separator />
     </div>
   );
 }

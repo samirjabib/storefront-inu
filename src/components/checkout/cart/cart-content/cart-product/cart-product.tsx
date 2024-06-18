@@ -14,26 +14,23 @@ export function CartProduct({
   containerStyles?: string;
 }) {
   return (
-    <>
-      <article
-        className={cn(
-          'group w-full min-h-32 rounded-lg relative cursor-pointer grid grid-cols-6 gap-x-4 bg-white',
-          containerStyles
-        )}
-      >
-        <CartProductImage product={product} />
-        <section className="col-span-4">
-          <h3
-            id={`product-name-${product.id}`}
-            className="text-xs md:text-sm group-hover:text-primary "
-          >
-            {shortenProductName(product.product_name)}
-          </h3>
-          <ProductCardSmallPricing product={product} />
-          <CartProductQuantity />
-        </section>
-      </article>
-      <Separator />
-    </>
+    <article
+      className={cn(
+        'group w-full min-h-32 rounded-lg px-2 py-8 relative cursor-pointer grid grid-cols-6 gap-x-4 bg-white',
+        containerStyles
+      )}
+    >
+      <CartProductImage product={product} />
+      <section className="col-span-4">
+        <h3
+          id={`product-name-${product.id}`}
+          className="text-xs md:text-sm group-hover:text-foreground mb-2"
+        >
+          {shortenProductName(product.product_name)}
+        </h3>
+        <ProductCardSmallPricing product={product} />
+        <CartProductQuantity />
+      </section>
+    </article>
   );
 }

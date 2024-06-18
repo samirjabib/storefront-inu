@@ -33,9 +33,7 @@ const ProductVitrine = async ({
         </Heading>
       </div>
       <Separator className="mb-4 bg-neutral-200" />
-      <ProductCarousel
-        collection={collection_mock as unknown as Product_Mock[]}
-      />
+      <ProductCarousel collection={products} />
     </section>
   );
 };

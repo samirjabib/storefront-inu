@@ -21,8 +21,8 @@ const SideMenuNavigation = ({
     <div>
       {currentCategory && (
         <div className="py-4 border-b w-full" onClick={handleBack}>
-          <button className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1">
-            <ChevronLeft className="text-black opacity-60" size={24} />
+          <button className="capitalize text-sm text-primary-foreground/80 cursor-pointer flex flex-row items-center gap-x-1 justify-start">
+            <ChevronLeft className="text-black opacity-60 p-0" size={24} />
             Volver
           </button>
         </div>

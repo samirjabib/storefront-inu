@@ -18,7 +18,11 @@ export default async function Home({
       <Header />
       <Banner data={dummieData} className="py-10" />
       <WelcomeHome className="pb-10" />
-      <ProductVitrine title="Lo mas vendido" className="pb-16" />
+      <ProductVitrine
+        title="Lo mas vendido"
+        className="pb-16"
+        countryCode={countryCode}
+      />
       <PetCarouselCategories className="pb-16" />
       <BannerGrid className="pb-16" />
       <Promises classNameContainer="py-12" />

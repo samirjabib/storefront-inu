@@ -3,15 +3,28 @@ import ProductCarousel from '../common/product-carousel';
 import { Separator } from '@/components/common/ui/separator';
 import { cn } from '@/lib/utils';
 import Heading from '../../ui/heading';
+import { getProductsList } from '@/lib/actions/collections';
 
-const ProductVitrine = ({
+const ProductVitrine = async ({
   title = 'Lo mas vendido',
   className,
+  countryCode,
 }: {
   title: string;
   className?: string;
+  countryCode: string;
 }) => {
   //add query from server side
+  const {
+    nextPage,
+    response: { count, products },
+    queryParams,
+  } = await getProductsList({
+    countryCode,
+  });
+
+  console.log(products);
+
   return (
     <section className={cn('px-4 md:px-6 max-w-screen-xl mx-auto', className)}>
       <div>

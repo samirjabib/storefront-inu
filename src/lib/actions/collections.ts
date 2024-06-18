@@ -10,7 +10,7 @@ import {
 } from '@medusajs/medusa';
 
 import { medusaClient } from '../config';
-import { getRegion } from './region';
+import { getRegion } from './regions';
 import transformProductPreview from '../utils/transform-product-preview';
 
 const emptyResponse = {

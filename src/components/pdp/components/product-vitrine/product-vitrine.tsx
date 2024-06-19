@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import { assets } from '../../../../../public/assets/assets';
+import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 
-export default function ProductVitrine() {
+export default function ProductVitrine({
+  product,
+}: {
+  product: PricedProduct;
+}) {
   return (
     <div className="w-full lg:w-1/2 bg-white h-96 rounded-lg lg:sticky lg:top-0">
       <Image

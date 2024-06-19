@@ -14,15 +14,25 @@ import ProductDescription from './product-description';
 import { ProductSpecifications } from './product-specification';
 import ProductTabs from './product-tabs/product-tabs';
 import ProductSku from './product-sku/product-sku';
+import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
+import { Suspense } from 'react';
+import { Region } from '@medusajs/medusa';
 
-export default function ProductInfoPanel() {
+export default function ProductInfoPanel({
+  product,
+}: {
+  product: PricedProduct;
+  region: Region;
+}) {
   return (
     <section className="w-full lg:w-1/2 gap-4 flex flex-col">
       <div className="flex flex-col w-full bg-white rounded-lg shadow-sm p-4 gap-4 lg:p-6">
         <ProductInfoPanelHeader />
-        <ProductName />
+        <ProductName product_name={product.title} />
         <ProductReview review_rating={4.5} />
-        <ProductSku />
+        <Suspense>
+          <ProductSku product={product} region={} />
+        </Suspense>
         <ProductPricing
           product={collection_mock[4] as unknown as Product_Mock}
         />
@@ -36,7 +46,7 @@ export default function ProductInfoPanel() {
         <ProductAdditionalInformation />
       </div>
       <div className="flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6">
-        <ProductDetails />
+        <ProductDetails product={product} />
         <ProductDescription />
         <ProductSpecifications />
       </div>

@@ -1,4 +1,16 @@
-export default function ProductSku() {
+import { Region } from '@medusajs/medusa';
+import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
+
+type Props = {
+  product: PricedProduct;
+  region: Region;
+  disabled?: boolean;
+};
+
+export default function ProductSku({}: Props) {
+
+
+
   return (
     <div className="flex flex-col gap-2">
       <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>

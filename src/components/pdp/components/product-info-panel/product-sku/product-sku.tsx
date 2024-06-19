@@ -1,5 +1,10 @@
+'use client';
 import { Region } from '@medusajs/medusa';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
+import { useParams } from 'next/navigation';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import ProductSkuSelect from './product-sku-select';
+import { isEqual } from 'lodash';
 
 type Props = {
   product: PricedProduct;
@@ -8,16 +13,105 @@ type Props = {
 };
 
 export default function ProductSku({ product, region, disabled }: Props) {
+  const [options, setOptions] = useState<Record<string, string>>({});
+  const [isAdding, setIsAdding] = useState(false);
+
+  const countryCode = useParams().countryCode as string;
+
+  const variants = product.variants;
+
+  // initialize the option state
+  useEffect(() => {
+    const optionObj: Record<string, string> = {};
+
+    for (const option of product.options || []) {
+      Object.assign(optionObj, { [option.id]: undefined });
+    }
+
+    setOptions(optionObj);
+  }, [product]);
+
+  // memoized record of the product's variants
+  const variantRecord = useMemo(() => {
+    const map: Record<string, Record<string, string>> = {};
+
+    for (const variant of variants) {
+      if (!variant.options || !variant.id) continue;
+
+      const temp: Record<string, string> = {};
+
+      for (const option of variant.options) {
+        temp[option.option_id] = option.value;
+      }
+
+      map[variant.id] = temp;
+    }
+
+    return map;
+  }, [variants]);
+
+  // memoized function to check if the current options are a valid variant
+  const variant = useMemo(() => {
+    let variantId: string | undefined = undefined;
+
+    for (const key of Object.keys(variantRecord)) {
+      if (isEqual(variantRecord[key], options)) {
+        variantId = key;
+      }
+    }
+
+    return variants.find((v) => v.id === variantId);
+  }, [options, variantRecord, variants]);
+
+  // if product only has one variant, then select it
+  useEffect(() => {
+    if (variants.length === 1 && variants[0].id) {
+      setOptions(variantRecord[variants[0].id]);
+    }
+  }, [variants, variantRecord]);
+
+  // update the options when a variant is selected
+  const updateOptions = (update: Record<string, string>) => {
+    setOptions({ ...options, ...update });
+  };
+
+  // check if the selected variant is in stock
+  const inStock = useMemo(() => {
+    // If we don't manage inventory, we can always add to cart
+    if (variant && !variant.manage_inventory) {
+      return true;
+    }
+
+    // If we allow back orders on the variant, we can add to cart
+    if (variant && variant.allow_backorder) {
+      return true;
+    }
+
+    // If there is inventory available, we can add to cart
+    if (variant?.inventory_quantity && variant.inventory_quantity > 0) {
+      return true;
+    }
+
+    // Otherwise, we can't add to cart
+    return false;
+  }, [variant]);
+
+  const actionsRef = useRef<HTMLDivElement>(null);
+
   return (
     <div className="flex flex-col gap-2">
       <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>
       <div className="flex gap-2">
-        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border border-ring bg-transparent drop-shadow cursor-pointer">
-          12kg
-        </div>
-        <div className="flex text-sm font-medium gap-2 p-4 bg-red-500 max-w-11 max-h-11 justify-center items-center rounded-lg border  bg-transparent">
-          6kg
-        </div>
+        {(product.options || []).map((option: any) => (
+          <ProductSkuSelect
+            option={option}
+            current={options[option.id]}
+            updateOption={updateOptions}
+            title={option.title}
+            data-testid="product-options"
+            disabled={!!disabled || isAdding}
+          />
+        ))}
       </div>
     </div>
   );

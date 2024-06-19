@@ -5,11 +5,27 @@ import transformProductPreview from '../utils/transform-product-preview';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import { medusaClient } from '../config';
 import { getRegion } from './regions';
+import getMedusaHeaders from '../utils/get-medusa-headers';
 
 const emptyResponse = {
   response: { products: [], count: 0 },
   nextPage: null,
 };
+
+export const getProductByHandle = cache(async function (
+  handle: string
+): Promise<{ product: PricedProduct }> {
+  const headers = getMedusaHeaders(['products']);
+
+  const product = await medusaClient.products
+    .list({ handle }, headers)
+    .then(({ products }) => products[0])
+    .catch((err) => {
+      throw err;
+    });
+
+  return { product };
+});
 
 export const getProductsList = cache(async function ({
   pageParam = 0,

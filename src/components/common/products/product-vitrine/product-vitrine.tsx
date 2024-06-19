@@ -23,8 +23,6 @@ const ProductVitrine = async ({
     countryCode,
   });
 
-  console.log(products);
-
   return (
     <section className={cn('px-4 md:px-6 max-w-screen-xl mx-auto', className)}>
       <div>

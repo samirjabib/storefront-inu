@@ -13,7 +13,7 @@ export function ProductCard({
   containerStyles?: string;
 }) {
   return (
-    <LocalizedClientLink href={`/products/${product.id}`}>
+    <LocalizedClientLink href={`/products/${product.handle}`}>
       <article
         className={cn(
           'group bg-white max-w-60 min-w-60 min-h-80 rounded-lg h-[21rem] shadow-sm border border-neutral-100 p-4 relative cursor-pointer',

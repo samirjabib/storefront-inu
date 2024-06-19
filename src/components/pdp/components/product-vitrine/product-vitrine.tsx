@@ -3,7 +3,7 @@ import { assets } from '../../../../../public/assets/assets';
 
 export default function ProductVitrine() {
   return (
-    <div className="w-full lg:w-1/2 bg-white h-96 rounded-lg lg:sticky lg:top-36">
+    <div className="w-full lg:w-1/2 bg-white h-96 rounded-lg lg:sticky lg:top-0">
       <Image
         src={assets.dog_food_2}
         width={1920}

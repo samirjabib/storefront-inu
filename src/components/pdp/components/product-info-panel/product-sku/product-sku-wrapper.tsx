@@ -15,6 +15,8 @@ export default async function ProductSkuWrapper({
 }) {
   const product = await retrievePricedProductById({ id, regionId: region.id });
 
+  console.log(product, 'im the product');
+
   if (!product) {
     return null;
   }

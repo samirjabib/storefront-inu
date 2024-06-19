@@ -69,10 +69,7 @@ export default async function PdpPage({ params }: Props) {
   const { product } = await getProductByHandle(params.handle).then(
     (product) => product
   );
-
   const region = await getRegion(params.countryCode);
-
-  console.log(product);
 
   if (!product) {
     notFound();

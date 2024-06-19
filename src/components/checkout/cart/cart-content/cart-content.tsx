@@ -1,6 +1,9 @@
 import { Product_Mock } from '@/lib/mocks/mocks';
 import { CartProduct } from './cart-product/cart-product';
 import { Separator } from '@/components/common/ui/separator';
+import CartCoupon from './cart-coupon/cart-coupon';
+import OrderSummary from './order-summary/order-summary';
+import { Button } from '@/components/common/ui/button';
 
 export default function CartContent({
   collection,
@@ -26,6 +29,13 @@ export default function CartContent({
       <p className="py-3 text-muted-foreground text-sm">
         {productNumber} Productos
       </p>
+      <Separator className="mb-4" />
+      <CartCoupon />
+      <OrderSummary />
+      <div className="flex flex-col gap-2 mb-4">
+        <Button>Ir a pagar</Button>
+        <Button variant={'outline'}>Seguir comprando</Button>
+      </div>
       <Separator />
     </div>
   );

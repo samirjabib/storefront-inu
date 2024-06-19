@@ -7,10 +7,7 @@ type Props = {
   disabled?: boolean;
 };
 
-export default function ProductSku({}: Props) {
-
-
-
+export default function ProductSku({ product, region, disabled }: Props) {
   return (
     <div className="flex flex-col gap-2">
       <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>

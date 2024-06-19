@@ -20,6 +20,7 @@ import { Region } from '@medusajs/medusa';
 
 export default function ProductInfoPanel({
   product,
+  region,
 }: {
   product: PricedProduct;
   region: Region;
@@ -30,8 +31,12 @@ export default function ProductInfoPanel({
         <ProductInfoPanelHeader />
         <ProductName product_name={product.title} />
         <ProductReview review_rating={4.5} />
-        <Suspense>
-          <ProductSku product={product} region={} />
+        <Suspense
+          fallback={
+            <ProductSku disabled={true} product={product} region={region} />
+          }
+        >
+          <ProductSku product={product} region={region} />
         </Suspense>
         <ProductPricing
           product={collection_mock[4] as unknown as Product_Mock}
@@ -47,7 +52,7 @@ export default function ProductInfoPanel({
       </div>
       <div className="flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6">
         <ProductDetails product={product} />
-        <ProductDescription />
+        <ProductDescription product={product} />
         <ProductSpecifications />
       </div>
       <div className="flex flex-col w-full  bg-white  rounded-lg shadow-sm p-4 gap-2 lg:p-6">

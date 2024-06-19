@@ -16,7 +16,7 @@ export function CartProduct({
   return (
     <article
       className={cn(
-        'group w-full min-h-32 rounded-lg px-2 py-6 relative cursor-pointer grid grid-cols-6 gap-x-4 bg-white',
+        'group w-full min-h-32 rounded-lg px-2 py-6 relative cursor-pointer grid grid-cols-6 gap-x-4 bg-white lg:grid-cols-8',
         containerStyles
       )}
     >

@@ -17,6 +17,7 @@ import ProductSku from './product-sku/product-sku';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import { Suspense } from 'react';
 import { Region } from '@medusajs/medusa';
+import ProductSkuWrapper from './product-sku/product-sku-wrapper';
 
 export default function ProductInfoPanel({
   product,
@@ -36,7 +37,7 @@ export default function ProductInfoPanel({
             <ProductSku disabled={true} product={product} region={region} />
           }
         >
-          <ProductSku product={product} region={region} />
+          <ProductSkuWrapper id={product.id || ''} region={region} />
         </Suspense>
         <ProductPricing
           product={collection_mock[4] as unknown as Product_Mock}

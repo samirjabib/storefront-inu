@@ -6,11 +6,11 @@ export default function CartProductList({
 }: {
   collection: Product_Mock[];
 }) {
-  const limitedCollection = collection.slice(0, 2);
+  const limitedCollection = collection.slice(0, 5);
 
   const productNumber = 2;
   return (
-    <div>
+    <div className="w-full">
       <div className="flex flex-col w-full gap-2">
         {limitedCollection.map((product) => (
           <CartProduct

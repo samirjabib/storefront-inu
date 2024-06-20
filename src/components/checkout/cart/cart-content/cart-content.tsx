@@ -9,12 +9,12 @@ export default function CartContent() {
   return (
     <div className="p-4 lg:px-6">
       <h1 className="text-foreground text-2xl mb-4 font-bold">Mi carrito</h1>
-      <div className="flex w-full flex-col lg:flex-row lg:justify-between">
+      <div className="flex w-full flex-col lg:flex-row lg:justify-between lg:gap-8">
         <CartProductList
           collection={collection_mock as unknown as Product_Mock[]}
         />
         <Separator className="mb-4 lg:hidden" />
-        <div className="flex flex-col w-full lg:max-w-96">
+        <div className="flex flex-col w-full lg:max-w-96 ">
           <CartCoupon />
           <OrderSummary />
           <CartActions />

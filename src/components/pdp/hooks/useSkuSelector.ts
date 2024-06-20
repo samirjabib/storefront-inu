@@ -16,6 +16,10 @@ export default function useSkuSelector({
   const variants = product.variants;
   const [isAdding, setIsAdding] = useState(false);
 
+  const updateOptions = (update: Record<string, string>) => {
+    setOptions({ ...options, ...update });
+  };
+
   // initialize the option state
   useEffect(() => {
     const optionObj: Record<string, string> = {};
@@ -87,10 +91,10 @@ export default function useSkuSelector({
 
   return {
     options,
-    setOptions,
     variant,
     inStock,
     isAdding,
+    updateOptions,
     setIsAdding,
   };
 }

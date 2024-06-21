@@ -1,3 +1,4 @@
+import AccountLink from '@/components/account/account-link';
 import {
   CircleUser,
   CreditCard,
@@ -13,32 +14,20 @@ export default async function AccountPage({
 }: {
   params: { countryCode: string };
 }) {
+  const links = [
+    { href: '/', icon: CircleUser, label: 'Mi Perfil' },
+    { href: '/', icon: Package, label: 'Mis Pedidos' },
+    { href: '/', icon: MapPin, label: 'Direcciones' },
+    { href: '/', icon: CreditCard, label: 'Metodos de pago' },
+    { href: '/', icon: Heart, label: 'Favoritos' },
+    { href: '/', icon: LogOut, label: 'Salir de la cuenta' },
+  ];
+
   return (
     <main className="bg-neutral-100 px-4 py-6 lg:py-12 grid lg:grid-cols-2 gap-4 max-w-screen-md mx-auto">
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <CircleUser size={24} />
-        <p className="text-base font-semibold">Mi Perfil</p>
-      </Link>
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <Package size={24} />
-        <p className="text-base font-semibold"> Mis Pedidos</p>
-      </Link>
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <MapPin size={24} />
-        <p className="text-base font-semibold">Direcciones</p>
-      </Link>
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <CreditCard size={24} />
-        <p className="text-base font-semibold">Metodos de pago</p>
-      </Link>
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <Heart size={24} />
-        <p className="text-base font-semibold">Favoritos</p>
-      </Link>
-      <Link href={'/'} className="flex gap-4 bg-white p-6 rounded-lg">
-        <LogOut size={24} />
-        <p className="text-base font-semibold">Salir de la cuenta</p>
-      </Link>
+      {links.map(({ href, icon, label }) => (
+        <AccountLink key={label} href={href} icon={icon} label={label} />
+      ))}
     </main>
   );
 }

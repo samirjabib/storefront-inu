@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { assets } from '../../../../../../public/assets/assets';
+import { assets } from '../../../../../public/assets/assets';
 export default function ProductPayWithAddi() {
   return (
     <div className="flex w-full flex-col  border p-2 rounded-lg max-w-screen-sm group cursor-pointer">

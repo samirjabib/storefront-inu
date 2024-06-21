@@ -1,9 +1,10 @@
+'use client';
 import { Button } from '@/components/common/ui/button';
-import ProductPayWithAddi from './product-pay-with-addi';
-import ProductPaymentMethods from './product-payment-methods/product-payment-methods';
+import ProductPayWithAddi from '../product-pay-with-addi';
+import ProductPaymentMethods from '../product-payment-methods/product-payment-methods';
 import useSkuSelector from '@/components/pdp/hooks/useSkuSelector';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
-import ProductSkuSelect from './product-sku-select';
+import ProductSkuSelect from '../product-sku-select';
 import { Region } from '@medusajs/medusa';
 
 export default function ProductActions({
@@ -33,18 +34,19 @@ export default function ProductActions({
           />
         ))}
       </div>
-      <ProductPaymentMethods />
-      <ProductPayWithAddi />
+      <div className="py-4 flex flex-col gap-y-2">
+        <ProductPaymentMethods />
+        <ProductPayWithAddi />
+      </div>
+
       <div className="w-full flex flex-col gap-2">
         <Button className="font-bold text-base">Comprar Ahora</Button>
-        <div className=" rounded-full bg-neutral-100 text-neutral-900 text-base hover:bg-neutral-200 transition-all">
-          <Button
-            variant={'outline'}
-            className=" rounded-full bg-neutral-100 text-neutral-900 text-base hover:bg-neutral-200 transition-all"
-          >
-            Añadir al carrito
-          </Button>
-        </div>
+        <Button
+          variant={'outline'}
+          className=" rounded-full bg-neutral-100 text-neutral-900 text-base hover:bg-neutral-200 transition-all"
+        >
+          Añadir al carrito
+        </Button>
       </div>
     </div>
   );

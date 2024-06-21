@@ -6,6 +6,7 @@ import useSkuSelector from '@/components/pdp/hooks/useSkuSelector';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import ProductSkuSelect from '../product-sku-select';
 import { Region } from '@medusajs/medusa';
+import ProductPricing from '../product-pricing/product-pricing';
 
 export default function ProductActions({
   product,
@@ -34,6 +35,7 @@ export default function ProductActions({
           />
         ))}
       </div>
+      <ProductPricing product={product} region={region} variant={variant} />
       <div className="py-4 flex flex-col gap-y-2">
         <ProductPaymentMethods />
         <ProductPayWithAddi />

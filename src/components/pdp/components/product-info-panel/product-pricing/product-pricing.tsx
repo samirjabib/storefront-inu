@@ -1,19 +1,22 @@
 'use client';
 import ProductDisccountLabel from './product-disccount-label';
-import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
+import {
+  PricedProduct,
+  PricedVariant,
+} from '@medusajs/medusa/dist/types/pricing';
 import { RegionInfo } from '@/lib/types/global';
 import { getProductPrice } from '@/lib/utils/get-product-price';
 import useSkuSelector from '@/components/pdp/hooks/useSkuSelector';
 
 export default function ProductPricing({
   product,
+  variant,
   region,
 }: {
   product: PricedProduct;
   region: RegionInfo;
+  variant: PricedVariant | undefined;
 }) {
-  const { variant } = useSkuSelector({ product });
-
   const { cheapestPrice, variantPrice } = getProductPrice({
     product,
     variantId: variant?.id,

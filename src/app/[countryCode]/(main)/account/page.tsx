@@ -24,10 +24,13 @@ export default async function AccountPage({
   ];
 
   return (
-    <main className="bg-neutral-100 px-4 py-6 lg:py-12 grid lg:grid-cols-2 gap-4 max-w-screen-md mx-auto">
-      {links.map(({ href, icon, label }) => (
-        <AccountLink key={label} href={href} icon={icon} label={label} />
-      ))}
+    <main className="bg-neutral-100 px-4 py-6 lg:py-12 max-w-screen-md mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Mi cuenta</h1>
+      <div className="grid lg:grid-cols-2 gap-4">
+        {links.map(({ href, icon, label }) => (
+          <AccountLink key={label} href={href} icon={icon} label={label} />
+        ))}
+      </div>
     </main>
   );
 }

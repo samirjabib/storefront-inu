@@ -5,8 +5,6 @@ import ProductPricing from './product-pricing/product-pricing';
 import ProductReview from './product-review';
 import ProductPaymentMethods from './product-payment-methods/product-payment-methods';
 import ProductPayWithAddi from './product-pay-with-addi';
-import ProductBuyNow from './product-buy-now';
-import ProductAddToCart from './product-add-to-cart';
 import ProductAdditionalInformation from './product-additional-information/product-additional-information';
 import { Separator } from '@/components/common/ui/separator';
 import ProductDetails from './product-details';
@@ -14,6 +12,7 @@ import ProductDescription from './product-description';
 import { ProductSpecifications } from './product-specification';
 import ProductTabs from './product-tabs/product-tabs';
 import ProductSku from './product-sku/product-sku';
+import ProductAddToCart from './product-add-to-cart';
 
 export default function ProductInfoPanel() {
   return (
@@ -29,7 +28,6 @@ export default function ProductInfoPanel() {
         <ProductPaymentMethods />
         <ProductPayWithAddi />
         <div className="w-full flex flex-col gap-2">
-          <ProductBuyNow />
           <ProductAddToCart />
         </div>
         <Separator className="my-4" />

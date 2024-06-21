@@ -11,22 +11,20 @@ export default function useSkuSelector({
   product: PricedProduct;
 }) {
   const [options, setOptions] = useState<Record<string, string>>({});
-
-  const countryCode = useParams().countryCode as string;
-  const variants = product.variants;
   const [isAdding, setIsAdding] = useState(false);
 
-  const updateOptions = (update: Record<string, string>) => {
-    setOptions({ ...options, ...update });
-  };
+  const countryCode = useParams().countryCode as string;
+
+  const variants = product.variants;
 
   // initialize the option state
   useEffect(() => {
     const optionObj: Record<string, string> = {};
 
     for (const option of product.options || []) {
-      Object.assign(option, { [option.id]: undefined });
+      Object.assign(optionObj, { [option.id]: undefined });
     }
+
     setOptions(optionObj);
   }, [product]);
 
@@ -69,6 +67,12 @@ export default function useSkuSelector({
     }
   }, [variants, variantRecord]);
 
+  // update the options when a variant is selected
+  const updateOptions = (update: Record<string, string>) => {
+    setOptions({ ...options, ...update });
+  };
+
+  // check if the selected variant is in stock
   const inStock = useMemo(() => {
     // If we don't manage inventory, we can always add to cart
     if (variant && !variant.manage_inventory) {
@@ -88,13 +92,13 @@ export default function useSkuSelector({
     // Otherwise, we can't add to cart
     return false;
   }, [variant]);
-
   return {
     options,
-    variant,
+    setOptions,
     inStock,
+    variant,
     isAdding,
-    updateOptions,
     setIsAdding,
+    updateOptions,
   };
 }

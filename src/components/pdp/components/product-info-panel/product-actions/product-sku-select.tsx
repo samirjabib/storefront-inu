@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils';
 import { onlyUnique } from '@/lib/utils/only-unique';
-import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import { ProductOption } from '@medusajs/product';
 
 type ProductSkuSelectProps = {
@@ -32,7 +31,7 @@ export default function ProductSkuSelect({
         return (
           <button
             disabled={disabled}
-            key={option.id}
+            key={option.product_id}
             className={cn(
               'border-2 p-2 rounded-lg shadow-sm text-sm text-black opacity-70',
               value === current ? 'border-primary' : 'border-neutral-200'

@@ -1,12 +1,12 @@
 import { Region } from '@medusajs/medusa';
-import ProductSku from './product-sku';
 import { retrievePricedProductById } from '@/lib/actions/products';
+import ProductActions from './product-actions';
 
 /**
  * Fetches real time pricing for a product and renders the product actions component.
  */
 
-export default async function ProductSkuWrapper({
+export default async function ProductActionsWrapper({
   id,
   region,
 }: {
@@ -21,5 +21,5 @@ export default async function ProductSkuWrapper({
     return null;
   }
 
-  return <ProductSku product={product} region={region} />;
+  return <ProductActions product={product} region={region} />;
 }

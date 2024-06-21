@@ -14,11 +14,11 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const categories = [
-  { image: assets.max_brand, label: 'Alimento para perros' },
-  { image: assets.hills, label: 'Alimento para gatos' },
-  { image: assets.equilibrio, label: 'Roedores' },
-  { image: assets.royal_canin, label: 'Aves' },
-  { image: assets.purina_proplan, label: 'Reptiles' },
+  { image: assets.dog, label: 'Perros' },
+  { image: assets.cat, label: 'Gatos' },
+  { image: assets.rat, label: 'Roedores' },
+  { image: assets.bird, label: 'Aves' },
+  { image: assets.reptile, label: 'Reptiles' },
   { image: assets.chicken, label: 'Granja y mas' },
 ];
 

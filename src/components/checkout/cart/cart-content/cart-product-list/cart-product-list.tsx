@@ -6,7 +6,7 @@ export default function CartProductList({
 }: {
   collection: Product_Mock[];
 }) {
-  const limitedCollection = collection.slice(0, 5);
+  const limitedCollection = collection.slice(0, 3);
 
   const productNumber = 2;
   return (

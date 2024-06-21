@@ -13,12 +13,12 @@ export default function CartContent() {
         <CartProductList
           collection={collection_mock as unknown as Product_Mock[]}
         />
-        <Separator className="mb-4 lg:hidden" />
-        <div className="flex flex-col w-full lg:max-w-96 ">
-          <CartCoupon />
-          <OrderSummary />
-          <CartActions />
-          <Separator />
+        <div className="flex flex-col w-full lg:max-w-96">
+          <div className="lg:sticky top-4">
+            <CartCoupon />
+            <OrderSummary />
+            <CartActions />
+          </div>
         </div>
       </div>
     </div>

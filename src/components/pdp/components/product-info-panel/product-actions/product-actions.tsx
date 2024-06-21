@@ -1,12 +1,12 @@
 'use client';
 import { Button } from '@/components/common/ui/button';
-import ProductPayWithAddi from '../product-pay-with-addi';
 import ProductPaymentMethods from '../product-payment-methods/product-payment-methods';
 import useSkuSelector from '@/components/pdp/hooks/useSkuSelector';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import ProductSkuSelect from '../product-sku-select';
 import { Region } from '@medusajs/medusa';
 import ProductPricing from '../product-pricing/product-pricing';
+import ProductPayWithAddi from '../product-payment-methods/product-pay-with-addi';
 
 export default function ProductActions({
   product,
@@ -17,8 +17,9 @@ export default function ProductActions({
   region: Region;
   disabled?: boolean;
 }) {
-  const { options, inStock, isAdding, setIsAdding, updateOptions, variant } =
-    useSkuSelector({ product });
+  const { options, inStock, isAdding, updateOptions, variant } = useSkuSelector(
+    { product }
+  );
 
   return (
     <div>
@@ -41,9 +42,18 @@ export default function ProductActions({
         <ProductPayWithAddi />
       </div>
 
-      <div className="w-full flex flex-col gap-2">
-        <Button className="font-bold text-base">Añadir al carrito</Button>
-      </div>
+      <Button
+        className="font-bold text-base w-full"
+        data-testid="add-product-button"
+        variant={inStock ? 'default' : 'outline'}
+        disabled={!inStock || !variant || !!disabled || isAdding}
+      >
+        {!variant
+          ? 'Selecciona una referencia'
+          : !inStock
+            ? 'Sin stock'
+            : 'Agregar al carrito'}
+      </Button>
     </div>
   );
 }

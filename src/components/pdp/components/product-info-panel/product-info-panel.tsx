@@ -1,5 +1,4 @@
 import { collection_mock, Product_Mock } from '@/lib/mocks/mocks';
-import ProductInfoPanelHeader from './product-info-panel-header';
 import ProductName from './product-name';
 import ProductPricing from './product-pricing/product-pricing';
 import ProductReview from './product-review';

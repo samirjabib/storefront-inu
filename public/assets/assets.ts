@@ -20,7 +20,20 @@ import rat from './pets-categories/rat.png';
 import fish from './pets-categories/fish.png';
 import reptile from './pets-categories/rep.png';
 
+/* Brand assets */
+
+import max_brand from './food-brands/max-brand.png';
+import equilibrio from './food-brands/equilibrio-brand.png';
+import hills from './food-brands/hills-brand.png';
+import royal_canin from './food-brands/royal-canin-brand.png';
+import purina_proplan from './food-brands/purina-proplan.png';
+
 export const assets = {
+  max_brand,
+  equilibrio,
+  hills,
+  royal_canin,
+  purina_proplan,
   addi,
   addi_icon,
   dog_food_1,

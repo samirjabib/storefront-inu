@@ -20,11 +20,6 @@ export default function ProductInfoPanel({
   return (
     <section className="w-full lg:w-1/2 gap-4 flex flex-col">
       <div className="flex flex-col w-full bg-white rounded-lg shadow-sm p-4 gap-4 lg:p-6">
-        <header className="flex gap-2 text-xs text-muted-foreground font-normal">
-          <p>Nuevo</p>
-          <span>|</span>
-          <p>+100 Vendidos</p>
-        </header>
         <h1 className="h1 card-foreground capitalize">{product.title}</h1>
         <ProductReview review_rating={4.5} />
         <Suspense

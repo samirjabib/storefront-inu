@@ -42,13 +42,7 @@ export default function ProductActions({
       </div>
 
       <div className="w-full flex flex-col gap-2">
-        <Button className="font-bold text-base">Comprar Ahora</Button>
-        <Button
-          variant={'outline'}
-          className=" rounded-full bg-neutral-100 text-neutral-900 text-base hover:bg-neutral-200 transition-all"
-        >
-          Añadir al carrito
-        </Button>
+        <Button className="font-bold text-base">Añadir al carrito</Button>
       </div>
     </div>
   );

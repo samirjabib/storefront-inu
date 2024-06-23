@@ -2,8 +2,10 @@ import { cn } from '@/lib/utils';
 
 export default function ProductDisccountLabel({
   className,
+  percentage_diff,
 }: {
   className?: string;
+  percentage_diff: string;
 }) {
   return (
     <span
@@ -12,7 +14,7 @@ export default function ProductDisccountLabel({
         className
       )}
     >
-      -17% OFF
+      -{percentage_diff}% OFF
     </span>
   );
 }

@@ -12,6 +12,24 @@ const emptyResponse = {
   nextPage: null,
 };
 
+export const retrievePricedProductById = cache(async function ({
+  id,
+  regionId,
+}: {
+  id: string;
+  regionId: string;
+}) {
+  const headers = getMedusaHeaders(['products']);
+
+  return medusaClient.products
+    .retrieve(`${id}?region_id=${regionId}`, headers)
+    .then(({ product }) => product)
+    .catch((err) => {
+      console.log(err);
+      return null;
+    });
+});
+
 export const getProductByHandle = cache(async function (
   handle: string
 ): Promise<{ product: PricedProduct }> {
@@ -23,6 +41,8 @@ export const getProductByHandle = cache(async function (
     .catch((err) => {
       throw err;
     });
+
+  console.log(product);
 
   return { product };
 });

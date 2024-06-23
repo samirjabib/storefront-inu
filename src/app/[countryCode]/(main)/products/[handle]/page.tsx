@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import SellerHeaderMobile from '@/components/seller/seller-header/seller-header-mobile';
 import ProductVitrine from '@/components/pdp/components/product-vitrine/product-vitrine';
 import ProductInfoPanel from '@/components/pdp/components/product-info-panel/product-info-panel';
-import { listRegions } from '@/lib/actions/regions';
+import { getRegion, listRegions } from '@/lib/actions/regions';
 import { getProductsList } from '@/lib/actions/collections';
 import { getProductByHandle } from '@/lib/actions/products';
 
@@ -46,9 +46,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { handle } = params;
-
-  const { product } = await getProductByHandle(handle).then(
+  const { product } = await getProductByHandle(params.handle).then(
     (product) => product
   );
 
@@ -68,12 +66,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PdpPage({ params }: Props) {
+  const { product } = await getProductByHandle(params.handle).then(
+    (product) => product
+  );
+  const region = await getRegion(params.countryCode);
+
+  if (!product) {
+    notFound();
+  }
+
+  if (!region) {
+    notFound();
+  }
+
   return (
-    <main className="w-full lg:p-6 max-w-screen-xl mx-auto">
+    <main className="w-full">
       <SellerHeaderMobile />
-      <div className="flex flex-col w-full lg:flex-row gap-6 pt-20 px-4">
-        <ProductVitrine />
-        <ProductInfoPanel />
+      <div className="flex flex-col w-full lg:flex-row gap-6 py-20 lg:py-24 px-4 max-w-screen-xl mx-auto">
+        <ProductVitrine product={product} />
+        <ProductInfoPanel product={product} region={region} />
       </div>
     </main>
   );

@@ -1,6 +1,5 @@
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { Home as HomeIcon, Search, UserRound, PawPrint } from 'lucide-react';
-import Link from 'next/link';
 
 const categories = [
   { icon: HomeIcon, label: 'Inicio' },

@@ -14,7 +14,7 @@ export default function AuthModal({ children }: { children: React.ReactNode }) {
 
   const isOpen = searchParams.get('login_modal_open');
 
-  const { push } = useRouter();
+  const { replace } = useRouter();
   const pathname = usePathname();
 
   const onCloseModal = () => {
@@ -22,7 +22,7 @@ export default function AuthModal({ children }: { children: React.ReactNode }) {
 
     params.delete('login_modal_open');
     params.delete('login_with_email');
-    push(`${pathname}?${params.toString()}`, { scroll: false });
+    replace(`${pathname}?${params.toString()}`, { scroll: false });
   };
 
   return (

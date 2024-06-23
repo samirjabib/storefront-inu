@@ -81,7 +81,6 @@ export default async function PdpPage({ params }: Props) {
 
   return (
     <main className="w-full">
-      <SellerHeaderMobile />
       <div className="flex flex-col w-full lg:flex-row gap-6 py-20 lg:py-24 px-4 max-w-screen-xl mx-auto">
         <ProductVitrine product={product} />
         <ProductInfoPanel product={product} region={region} />

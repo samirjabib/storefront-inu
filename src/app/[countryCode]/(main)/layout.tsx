@@ -19,6 +19,7 @@ export default async function StoreLayout({
   return (
     <div className="bg-background">
       {/* <UnderDevelopment /> */}
+      <Header />
       {children}
       <Footer />
       <Tabs />

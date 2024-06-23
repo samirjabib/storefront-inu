@@ -15,7 +15,6 @@ export default async function Home({
 }) {
   return (
     <main className="bg-neutral-100">
-      <Header />
       <Banner data={dummieData} className="py-10" />
       <WelcomeHome className="pb-10" />
       <ProductVitrine

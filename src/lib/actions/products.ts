@@ -42,6 +42,8 @@ export const getProductByHandle = cache(async function (
       throw err;
     });
 
+  console.log(product);
+
   return { product };
 });
 

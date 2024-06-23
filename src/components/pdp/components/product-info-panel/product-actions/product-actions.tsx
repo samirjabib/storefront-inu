@@ -32,7 +32,7 @@ export default function ProductActions({
 
   return (
     <div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 mb-4">
         <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>
         {(product.options || []).map((option, index) => (
           <ProductSkuSelect
@@ -58,10 +58,10 @@ export default function ProductActions({
         data-testid="add-product-button"
       >
         {!variant
-          ? 'Select variant'
+          ? 'Selecciona variante'
           : !inStock
-            ? 'Out of stock'
-            : 'Add to cart'}
+            ? 'Sin stock'
+            : 'Añadir al carrito'}
       </Button>
     </div>
   );

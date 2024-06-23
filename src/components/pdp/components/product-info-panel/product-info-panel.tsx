@@ -4,14 +4,14 @@ import { Separator } from '@/components/common/ui/separator';
 import { ProductSpecifications } from './product-specification';
 import ProductTabs from './product-tabs/product-tabs';
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Region } from '@medusajs/medusa';
 import ProductActions from './product-actions/product-actions';
 import ProductActionsWrapper from './product-actions/product-actions-wrapper';
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
 import { notFound } from 'next/navigation';
 
-export default function ProductInfoPanel({
+export default async function ProductInfoPanel({
   product,
   region,
 }: {
@@ -21,6 +21,8 @@ export default function ProductInfoPanel({
   if (!product || !product.id) {
     return notFound();
   }
+
+  const brand = product?.metadata?.brand as string;
 
   return (
     <section className="w-full lg:w-1/2 gap-4 flex flex-col">
@@ -44,18 +46,22 @@ export default function ProductInfoPanel({
             Detalles del producto
           </h3>
           <ul className="flex w-full flex-col gap-2 lg:max-w-[70%]">
-            <li className="text-sm flex gap-2 font-normal">
-              <span className="text-neutral-600 w-1/3">Marca:</span>
-              <LocalizedClientLink href="/" className="w-2/3 underline">
-                Max Vita
-              </LocalizedClientLink>
-            </li>
-            <li className="text-sm flex gap-2 font-normal">
-              <span className="text-neutral-600 w-1/3">Categoria:</span>
-              <LocalizedClientLink href="/" className="w-2/3 underline">
-                Alimento de perros
-              </LocalizedClientLink>
-            </li>
+            {product?.metadata?.brand && (
+              <li className="text-sm flex gap-2 font-normal">
+                <span className="text-neutral-600 w-1/3">Marca:</span>
+                <LocalizedClientLink href="/" className="w-2/3 underline">
+                  {brand}
+                </LocalizedClientLink>
+              </li>
+            )}
+            {product.type && (
+              <li className="text-sm flex gap-2 font-normal">
+                <span className="text-neutral-600 w-1/3">Categoria:</span>
+                <LocalizedClientLink href="/" className="w-2/3 underline">
+                  {product.type.value}
+                </LocalizedClientLink>
+              </li>
+            )}
           </ul>
         </div>
         <div className="w-full flex flex-col mb-4">

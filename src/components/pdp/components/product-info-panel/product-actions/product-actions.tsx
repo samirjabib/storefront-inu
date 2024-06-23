@@ -8,15 +8,24 @@ import { Region } from '@medusajs/medusa';
 import ProductPricing from '../product-pricing/product-pricing';
 import ProductPayWithAddi from '../product-payment-methods/product-pay-with-addi';
 
+type ProductActionsProps = {
+  product: PricedProduct;
+  region: Region;
+  disabled?: boolean;
+};
+
+export type PriceType = {
+  calculated_price: string;
+  original_price?: string;
+  price_type?: 'sale' | 'default';
+  percentage_diff?: string;
+};
+
 export default function ProductActions({
   product,
   region,
   disabled,
-}: {
-  product: PricedProduct;
-  region: Region;
-  disabled?: boolean;
-}) {
+}: ProductActionsProps) {
   const { options, inStock, isAdding, updateOptions, variant } = useSkuSelector(
     { product }
   );
@@ -25,8 +34,9 @@ export default function ProductActions({
     <div>
       <div className="flex flex-col gap-2">
         <h3 className="text-sm font-semibold">Seleccione su referencia :</h3>
-        {(product.options || []).map((option) => (
+        {(product.options || []).map((option, index) => (
           <ProductSkuSelect
+            key={index}
             option={option}
             current={options[option.id]}
             updateOption={updateOptions}
@@ -43,16 +53,15 @@ export default function ProductActions({
       </div>
 
       <Button
-        className="font-bold text-base w-full"
-        data-testid="add-product-button"
-        variant={inStock ? 'default' : 'outline'}
         disabled={!inStock || !variant || !!disabled || isAdding}
+        className="w-full"
+        data-testid="add-product-button"
       >
         {!variant
-          ? 'Selecciona una referencia'
+          ? 'Select variant'
           : !inStock
-            ? 'Sin stock'
-            : 'Agregar al carrito'}
+            ? 'Out of stock'
+            : 'Add to cart'}
       </Button>
     </div>
   );

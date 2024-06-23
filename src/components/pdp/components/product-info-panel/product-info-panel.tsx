@@ -9,6 +9,7 @@ import { Region } from '@medusajs/medusa';
 import ProductActions from './product-actions/product-actions';
 import ProductActionsWrapper from './product-actions/product-actions-wrapper';
 import LocalizedClientLink from '@/components/common/localized-client-link/localized-client-link';
+import { notFound } from 'next/navigation';
 
 export default function ProductInfoPanel({
   product,
@@ -17,6 +18,10 @@ export default function ProductInfoPanel({
   product: PricedProduct;
   region: Region;
 }) {
+  if (!product || !product.id) {
+    return notFound();
+  }
+
   return (
     <section className="w-full lg:w-1/2 gap-4 flex flex-col">
       <div className="flex flex-col w-full bg-white rounded-lg shadow-sm p-4 gap-4 lg:p-6">
@@ -27,7 +32,7 @@ export default function ProductInfoPanel({
             <ProductActions disabled={true} product={product} region={region} />
           }
         >
-          <ProductActionsWrapper id={product.id || ''} region={region} />
+          <ProductActionsWrapper id={product.id} region={region} />
         </Suspense>
 
         <Separator className="my-4" />

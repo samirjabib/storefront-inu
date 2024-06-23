@@ -1,9 +1,8 @@
 'use client';
-
 import { PricedProduct } from '@medusajs/medusa/dist/types/pricing';
 import { isEqual } from 'lodash';
 import { useParams } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 export default function useSkuSelector({
   product,
@@ -85,13 +84,15 @@ export default function useSkuSelector({
     }
 
     // If there is inventory available, we can add to cart
-    if (variant?.inventory_quantity && variant.inventory_quantity > 0) {
+    if (variant?.inventory_quantity && variant?.inventory_quantity > 0) {
       return true;
     }
 
     // Otherwise, we can't add to cart
     return false;
   }, [variant]);
+
+
   return {
     options,
     setOptions,
